@@ -1,0 +1,39 @@
+name: Genera App Android (APK)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Codice
+      uses: actions/checkout@v3
+
+    - name: Imposta Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Imposta Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu'
+        java-version: '17'
+
+    - name: Installa Dipendenze
+      run: npm install
+
+    - name: Sincronizza Capacitor
+      run: npx cap sync android
+
+    - name: Compila App Android (Debug APK)
+      working-directory: ./android
+      run: chmod +x gradlew && ./gradlew assembleDebug
+
+    - name: Carica File APK per il Download
+      uses: actions/upload-artifact@v3
+      with:
+        name: FlowPulseM-Android-App
+        path: android/app/build/outputs/apk/debug/app-debug.apk
