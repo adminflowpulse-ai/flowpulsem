@@ -26,7 +26,10 @@ jobs:
       run: npm install
 
     - name: Sincronizza Capacitor
-      run: npx cap sync android
+      run: |
+        mkdir -p out
+        mkdir -p android/app/src/main/assets/public
+        npx cap sync android
 
     - name: Compila App Android (Debug APK)
       working-directory: ./android
