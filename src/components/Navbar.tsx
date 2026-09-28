@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState, useEffect } from 'react';
 import Link from "next/link";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
@@ -6,6 +6,7 @@ import { useAccount, useDisconnect } from 'wagmi';
 import { supabase } from '@/lib/supabase';
 
 export default function Navbar() {
+  const { language, toggleLanguage, t } = useLanguage();
   const { address, isConnected } = useAccount();
   const { disconnect } = useDisconnect();
   const [role, setRole] = useState<string | null>(null);
@@ -66,7 +67,10 @@ export default function Navbar() {
           ) : (
             <Link href="/login" className="nav-link" style={{ background: 'var(--accent-blue)', color: '#fff', padding: '8px 20px', borderRadius: '8px', fontWeight: 'bold', fontSize: '1rem', boxShadow: '0 0 10px rgba(27, 97, 255, 0.5)' }}>ACCEDI</Link>
           )}
-          <ConnectButton />
+          <button onClick={toggleLanguage} style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '8px', padding: '5px 10px', color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '5px', fontSize: '1rem' }}>
+          {language === 'it' ? '🇬🇧 EN' : '🇮🇹 IT'}
+        </button>
+        <ConnectButton />
         </div>
       </div>
 
