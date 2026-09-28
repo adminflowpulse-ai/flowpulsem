@@ -1,0 +1,63 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  role      String   @default("FAN") // "FAN" o "DJ"
+  wallet    String?  @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  tracks    Track[]  @relation("DJTracks")
+  purchases Purchase[]
+  bookings  Booking[] @relation("FanBookings")
+  receivedBookings Booking[] @relation("DJBookings")
+}
+
+model Track {
+  id          String   @id @default(cuid())
+  title       String
+  bpm         Int?
+  priceCoin   Float    @default(0)
+  tokenId     String?  @unique
+  txHash      String?
+  djId        String
+  dj          User     @relation("DJTracks", fields: [djId], references: [id])
+  createdAt   DateTime @default(now())
+  
+  purchases   Purchase[]
+}
+
+model Purchase {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  trackId     String
+  track       Track    @relation(fields: [trackId], references: [id])
+  amount      Float
+  txHash      String?
+  createdAt   DateTime @default(now())
+}
+
+model Booking {
+  id          String   @id @default(cuid())
+  fanId       String
+  fan         User     @relation("FanBookings", fields: [fanId], references: [id])
+  djId        String
+  dj          User     @relation("DJBookings", fields: [djId], references: [id])
+  status      String   @default("PENDING") // PENDING, ACCEPTED, REJECTED, COMPLETED
+  date        DateTime?
+  price       Float
+  createdAt   DateTime @default(now())
+}

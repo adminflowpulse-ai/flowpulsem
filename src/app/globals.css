@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&family=Dancing+Script:wght@700&display=swap');
+
+:root {
+  --bg-color: #0d0f1a;
+  --surface-color: rgba(20, 25, 40, 0.7);
+  --surface-color-hover: rgba(30, 38, 60, 0.9);
+  --text-main: #b0b0b0;
+  --text-highlight: #ffffff;
+  --accent-blue: #1b61ff;
+  --accent-green: #00ff33;
+  --accent-red: #ff003c;
+  --accent-primary: var(--accent-blue);
+  --accent-secondary: var(--accent-green);
+  --accent-tertiary: var(--accent-red);
+  --accent-gradient: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-green) 100%);
+  
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(27, 97, 255, 0.15), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(0, 255, 51, 0.1), transparent 40%);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-highlight);
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-secondary);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-tertiary);
+  text-shadow: 0 0 8px rgba(255, 0, 60, 0.5);
+}
+
+.nav-link {
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: all 0.2s;
+}
+.nav-link:hover {
+  color: var(--accent-secondary);
+  transform: translateY(-2px);
+}
+
+/* UI Utilities */
+.glass-panel {
+  background: var(--surface-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.glass-panel:hover {
+  background: var(--surface-color-hover);
+  border-color: rgba(27, 97, 255, 0.3);
+}
+
+.text-gradient {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(27, 97, 255, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(27, 97, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(27, 97, 255, 0); }
+}
+
+.btn-primary {
+  background: var(--accent-gradient);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+  animation: pulseGlow 1.5s infinite;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent-tertiary);
+  border: 2px solid var(--accent-tertiary);
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--accent-tertiary);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 0, 60, 0.6);
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS & MEDIA QUERIES
+========================================= */
+@media screen and (max-width: 768px) {
+  /* Contenitori e Layout Base */
+  .container {
+    padding: 0 10px;
+  }
+  
+  /* Adattamento Testi e Intestazioni */
+  h1 { font-size: clamp(2rem, 8vw, 3rem) !important; }
+  h2 { font-size: clamp(1.5rem, 6vw, 2.5rem) !important; }
+  h3 { font-size: clamp(1.2rem, 5vw, 1.8rem) !important; }
+  p { font-size: 1rem !important; }
+
+  /* Navbar Mobile */
+  header {
+    padding: 0.5rem 0 !important;
+  }
+  .nav-link {
+    font-size: 0.9rem !important;
+    padding: 5px 10px !important;
+  }
+  
+  /* Pulsanti Mobile */
+  .btn-primary, .btn-secondary {
+    padding: 10px 20px !important;
+    font-size: 0.9rem !important;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Riorganizzazione layout a colonne per le Dashboard */
+  .glass-panel {
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  /* Tabelle (Es. Dashboard tracce) */
+  table, thead, tbody, th, td, tr { 
+    display: block; 
+  }
+  thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr { border: 1px solid rgba(255,255,255,0.1); margin-bottom: 10px; border-radius: 10px; }
+  td { 
+    border: none;
+    position: relative;
+    padding-left: 50% !important; 
+    text-align: right !important; 
+  }
+  td:before { 
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    content: attr(data-label);
+    color: var(--text-main);
+    text-align: left;
+    font-weight: bold;
+  }
+}
