@@ -42,7 +42,7 @@ export default function PitchSquillace() {
       }}>
         <h2 style={{ fontSize: '3.5rem', color: 'var(--accent-blue)', margin: '0 0 40px 0', borderBottom: '2px solid rgba(255,255,255,0.1)', paddingBottom: '20px' }}>1. La Visione (L'Oval Office)</h2>
         <p style={{ fontSize: '2rem', lineHeight: '1.6', color: '#d0d0d0', marginBottom: '30px' }}>
-          Davide, stiamo costruendo un impero tecnologico e musicale. Quello che ti stiamo proponendo non è essere un semplice utente, ma sederti nell'<span style={{ color: 'var(--accent-red)', fontWeight: 'bold' }}>Oval Office</span> prima che il resto del mondo sappia che esiste.
+          Davide, stiamo costruendo un impero tecnologico e musicale. Quello che ti stiamo proponendo non Ã¨ essere un semplice utente, ma sederti nell'<span style={{ color: 'var(--accent-red)', fontWeight: 'bold' }}>Oval Office</span> prima che il resto del mondo sappia che esiste.
         </p>
         <p style={{ fontSize: '2rem', lineHeight: '1.6', color: '#d0d0d0' }}>
           Oggi ti garantiamo 100.000 $FPM al prezzo Ground Zero (0.01 Euro). Noi azzeriamo completamente le commissioni per i creatori: <span style={{ color: 'var(--accent-green)', fontWeight: 'bold' }}>0% Fee per te.</span> I costi dell'infrastruttura li paga interamente il mercato.
@@ -65,7 +65,7 @@ export default function PitchSquillace() {
           Entrando ora come Ambassador, il tuo portafoglio agisce come un moltiplicatore spaventoso. 
         </p>
         <p style={{ fontSize: '2rem', lineHeight: '1.6', color: '#d0d0d0' }}>
-          Quando il mercato globale (utenti, fan, investitori) entrerà a mercato aperto e spingerà il token a 2.00 Euro, tu avrai fatto un <span style={{ color: 'var(--accent-green)', fontWeight: 'bold', fontSize: '3rem', display: 'block', margin: '30px 0' }}>200x Netto</span> 
+          Quando il mercato globale (utenti, fan, investitori) entrerÃ  a mercato aperto e spingerÃ  il token a 2.00 Euro, tu avrai fatto un <span style={{ color: 'var(--accent-green)', fontWeight: 'bold', fontSize: '3rem', display: 'block', margin: '30px 0' }}>2000x Netto</span> 
           esattamente come i primi soci delle grandi Tech Americane. Sei dei nostri?
         </p>
       </div>
