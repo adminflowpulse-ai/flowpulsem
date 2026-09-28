@@ -26,7 +26,7 @@ export default function ExplorePage() {
         <div style={{ maxWidth: '600px', margin: '0 auto 3rem', display: 'flex', gap: '10px' }}>
           <input 
             type="text" 
-            placeholder="Search...acks o stems..." 
+            placeholder="Cerca tracce o stems..." 
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             style={{ flex: 1, padding: '15px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.5)', color: '#fff' }}
@@ -49,7 +49,7 @@ export default function ExplorePage() {
                   {track.price} <img src="/coin.jpg" alt="FPM" style={{ height: "1em", borderRadius: "50%", verticalAlign: "middle" }} />
                 </span>
                 <button className="btn-primary" style={{ padding: '8px 20px', borderRadius: '20px' }}>
-                  Buy
+                  Acquista
                 </button>
               </div>
             </div>

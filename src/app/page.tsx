@@ -25,7 +25,7 @@ export default function PreLaunchWall() {
       if (error.code === '23505') {
          setErrorMsg('Questa email Ã¨ giÃ  in lista d\'attesa!');
       } else {
-         setErrorMsg('Connection error. Please try again.');
+         setErrorMsg('Errore di connessione. Riprova.');
          console.error(error);
       }
     } else {
@@ -45,24 +45,24 @@ export default function PreLaunchWall() {
             <sup style={{ color: 'var(--accent-red)', fontSize: 'clamp(1rem, 4vw, 2rem)', marginLeft: '4px', textShadow: 'none' }}>&reg;</sup>
         </h1>
         <p style={{ color: 'var(--text-main)', fontSize: '1.2rem', marginTop: '10px', letterSpacing: '2px', textTransform: 'uppercase' }}>
-          The New Era of the Music Industry
+          La Nuova Era dell'Industria Musicale
         </p>
       </div>
 
       {/* Main Box */}
       <div style={{ backgroundColor: 'var(--surface-color)', border: '1px solid rgba(27, 97, 255, 0.4)', borderRadius: '15px', padding: '4rem 5rem', maxWidth: '1000px', width: '95%', boxShadow: '0 20px 50px rgba(0,0,0,0.5)', backdropFilter: 'blur(10px)', animation: 'fadeInUp 1s ease-out 0.3s backwards' }}>
-        <h2 style={{ marginTop: 0, fontSize: '1.8rem', marginBottom: '1rem', color: 'var(--text-highlight)' }}>Early Access Closed</h2>
+        <h2 style={{ marginTop: 0, fontSize: '1.8rem', marginBottom: '1rem', color: 'var(--text-highlight)' }}>Accesso Anticipato Chiuso</h2>
         
         {isSubmitted ? (
           <div style={{ padding: '2rem', backgroundColor: 'rgba(0, 255, 51, 0.1)', border: '1px solid var(--accent-green)', borderRadius: '10px', marginBottom: '2rem' }}>
-            <h3 style={{ color: 'var(--accent-green)', marginTop: 0 }}>Welcome Aboard!</h3>
-            <p style={{ color: '#ddd', marginBottom: 0 }}>Your email has been added to the priority list. We will contact you as soon as the servers are open to the public.</p>
+            <h3 style={{ color: 'var(--accent-green)', marginTop: 0 }}>Benvenuto a Bordo!</h3>
+            <p style={{ color: '#ddd', marginBottom: 0 }}>La tua email ({email}) Ã¨ stata aggiunta alla lista prioritaria. Ti contatteremo non appena i server saranno aperti al pubblico.</p>
           </div>
         ) : (
           <>
             <p style={{ color: 'var(--text-main)', lineHeight: '1.5', marginBottom: '2rem' }}>
-              The platform is currently in Closed Beta.
-              Leave your email to join the waitlist.
+              La piattaforma Ã¨ attualmente in fase di Closed Beta.
+              Lascia la tua email per entrare in lista d'attesa.
             </p>
 
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginBottom: '2rem' }}>
@@ -70,13 +70,13 @@ export default function PreLaunchWall() {
                 type="email" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email (e.g., dj@gmail.com)" 
+                placeholder="La tua email (es. dj@gmail.com)" 
                 required
                 disabled={isLoading}
                 style={{ padding: '20px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', backgroundColor: 'rgba(0,0,0,0.3)', color: '#fff', fontSize: '1rem', outline: 'none' }}
               />
               <button type="submit" disabled={isLoading} style={{ padding: '20px', borderRadius: '12px', border: 'none', background: 'var(--accent-gradient)', color: '#fff', fontSize: '1.4rem', fontWeight: 'bold', cursor: isLoading ? 'not-allowed' : 'pointer', transition: 'opacity 0.2s, box-shadow 0.2s', opacity: isLoading ? 0.7 : 1, boxShadow: '0 0 15px rgba(27, 97, 255, 0.4)' }}>
-                {isLoading ? 'Joining...' : 'Mettimi in Lista d\'Attesa'}
+                {isLoading ? 'Iscrizione in corso...' : 'Mettimi in Lista d\'Attesa'}
               </button>
               {errorMsg && <p style={{ color: 'var(--accent-red)', fontSize: '0.9rem', margin: 0 }}>{errorMsg}</p>}
             </form>
@@ -84,18 +84,18 @@ export default function PreLaunchWall() {
         )}
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', borderTop: '1px solid #333', paddingTop: '2rem' }}>
-          <h3 style={{ color: 'var(--text-main)', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '5px' }}>Web3 Access</h3>
+          <h3 style={{ color: 'var(--text-main)', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '5px' }}>Accesso Web3</h3>
           
           <Link href="/dashboard/dj" style={{ padding: '20px 30px', borderRadius: '15px', backgroundColor: 'transparent', border: '2px solid var(--accent-blue)', color: '#fff', textDecoration: 'none', fontWeight: 'bold', fontSize: '1.4rem', transition: 'all 0.3s', textAlign: 'center' }}
                 onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'var(--accent-blue)'; e.currentTarget.style.boxShadow = '0 0 15px rgba(27, 97, 255, 0.5)'; }}
                 onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.boxShadow = 'none'; }}>
-            ðŸŽ§ I AM A DJ (Connect Wallet)
+            ðŸŽ§ SONO UN DJ (Connetti Wallet)
           </Link>
           
           <Link href="/dashboard/fan" style={{ padding: '20px 30px', borderRadius: '15px', backgroundColor: 'transparent', border: '2px solid var(--accent-green)', color: '#fff', textDecoration: 'none', fontWeight: 'bold', fontSize: '1.4rem', transition: 'all 0.3s', textAlign: 'center' }}
                 onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'var(--accent-green)'; e.currentTarget.style.boxShadow = '0 0 15px rgba(0, 255, 51, 0.5)'; }}
                 onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.boxShadow = 'none'; }}>
-            ðŸŽµ I AM A FAN (Connect Wallet)
+            ðŸŽµ SONO UN FAN (Connetti Wallet)
           </Link>
           
           <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'center' }}>
