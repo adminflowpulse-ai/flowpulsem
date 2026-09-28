@@ -47,7 +47,7 @@ export default function PreLaunchWall() {
             <sup style={{ color: 'var(--accent-red)', fontSize: 'clamp(1rem, 4vw, 2rem)', marginLeft: '4px', textShadow: 'none' }}>&reg;</sup>
         </h1>
         <p style={{ color: 'var(--text-main)', fontSize: '1.2rem', marginTop: '10px', letterSpacing: '2px', textTransform: 'uppercase' }}>
-          {t('La Nuova Era dell''Industria Musicale')}
+          {t('La Nuova Era dell\'Industria Musicale')}
         </p>
       </div>
 
