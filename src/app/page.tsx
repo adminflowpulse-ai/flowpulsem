@@ -64,7 +64,7 @@ export default function PreLaunchWall() {
           <>
             <p style={{ color: 'var(--text-main)', lineHeight: '1.5', marginBottom: '2rem' }}>
               {t('La piattaforma ÃƒÂ¨ attualmente in fase di Closed Beta.')}
-              {t('Lascia la tua email per entrare in lista d''attesa.')}
+              {t('Lascia la tua email per entrare in lista d\'attesa.')}
             </p>
 
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginBottom: '2rem' }}>
@@ -78,7 +78,7 @@ export default function PreLaunchWall() {
                 style={{ padding: '20px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', backgroundColor: 'rgba(0,0,0,0.3)', color: '#fff', fontSize: '1rem', outline: 'none' }}
               />
               <button type="submit" disabled={isLoading} style={{ padding: '20px', borderRadius: '12px', border: 'none', background: 'var(--accent-gradient)', color: '#fff', fontSize: '1.4rem', fontWeight: 'bold', cursor: isLoading ? 'not-allowed' : 'pointer', transition: 'opacity 0.2s, box-shadow 0.2s', opacity: isLoading ? 0.7 : 1, boxShadow: '0 0 15px rgba(27, 97, 255, 0.4)' }}>
-                {isLoading ? t('Iscrizione in corso...') : t('Mettimi in Lista d''Attesa')}
+                {isLoading ? t('Iscrizione in corso...') : t('Mettimi in Lista d\'Attesa')}
               </button>
               {errorMsg && <p style={{ color: 'var(--accent-red)', fontSize: '0.9rem', margin: 0 }}>{errorMsg}</p>}
             </form>
