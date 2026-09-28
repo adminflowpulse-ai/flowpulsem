@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState, useRef } from 'react';
 import Navbar from "@/components/Navbar";
 import * as Tone from 'tone';
@@ -56,7 +56,7 @@ export default function DJDashboard() {
             onClick={() => setActiveTab('profile')}
             style={{ background: 'none', border: 'none', color: activeTab === 'profile' ? '#00f0ff' : 'var(--text-main)', fontWeight: activeTab === 'profile' ? 'bold' : 'normal', fontSize: '1.2rem', cursor: 'pointer' }}
           >
-            ðŸ‘¤ Profilo Artista & Vetrina
+            ðŸ‘¤ Profile Artista & Vetrina
           </button>
           <button 
             onClick={() => setActiveTab('live')}
@@ -131,17 +131,17 @@ export default function DJDashboard() {
 
             {/* Track Subcoins */}
             <div className="glass-panel" style={{ flex: '2 1 600px', padding: '2rem', borderTop: '4px solid #ff3366' }}>
-              <h3 style={{ color: 'var(--text-main)', marginBottom: '1rem', fontSize: '1rem' }}>SUBCOIN DELLE TUE TRACCE</h3>
+              <h3 style={{ color: 'var(--text-main)', marginBottom: '1rem', fontSize: '1rem' }}>SUBCOIN DELLE TUE Tracks</h3>
               <table style={{ width: '100%', textAlign: 'left', borderCollapse: 'collapse' }}>
                 <thead>
                   <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.1)', color: '#888' }}>
-                    <th style={{ padding: '10px' }}>Traccia</th>
+                    <th style={{ padding: '10px' }}>Track</th>
                     <th style={{ padding: '10px' }}>Ticker</th>
-                    <th style={{ padding: '10px' }}>Prezzo Attuale</th>
+                    <th style={{ padding: '10px' }}>Current Price</th>
                     <th style={{ padding: '10px' }}>Holders</th>
                   </tr>
                 </thead>
-                <tbody><tr><td style={{ padding: "15px 10px", fontStyle: "italic", color: "#666", textAlign: "center" }} colSpan={4}>Nessuna traccia pubblicata</td></tr></tbody>
+                <tbody><tr><td style={{ padding: "15px 10px", fontStyle: "italic", color: "#666", textAlign: "center" }} colSpan={4}>Nessuna Track pubblicata</td></tr></tbody>
               </table>
             </div>
 
@@ -176,7 +176,7 @@ export default function DJDashboard() {
                   </div>
                 </div>
 
-                <button type="button" className="btn-primary" style={{ padding: '15px', fontSize: '1.1rem', marginTop: '1rem', width: '200px' }}>Salva Profilo</button>
+                <button type="button" className="btn-primary" style={{ padding: '15px', fontSize: '1.1rem', marginTop: '1rem', width: '200px' }}>Salva Profile</button>
               </form>
             </div>
 
@@ -255,11 +255,11 @@ export default function DJDashboard() {
         {activeTab === 'community' && (
           <div style={{ display: 'flex', gap: '2rem' }}>
             <div className="glass-panel" style={{ flex: 2, padding: '2rem' }}>
-              <h2 style={{ marginBottom: '1rem' }}>Nuovo Messaggio ai Fan</h2>
+              <h2 style={{ marginBottom: '1rem' }}>Nuovo Messageso ai Fan</h2>
               <p style={{ color: 'var(--text-main)', marginBottom: '1rem' }}>Crea un post esclusivo. Solo chi detiene la tua <img src="/coin.jpg" alt="FPM Coin" style={{ height: "1.2em", borderRadius: "50%", verticalAlign: "middle", margin: "0 5px" }} /> Coin potrÃ  leggerlo.</p>
               
               <textarea 
-                placeholder="Scrivi un aggiornamento, condividi un link privato o un dietro le quinte..." 
+                placeholder="Scrivi un aggiornamento, Share un link privato o un dietro le quinte..." 
                 rows={5}
                 style={{ width: '100%', padding: '15px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(0,0,0,0.5)', color: 'white', marginBottom: '1rem' }}
               />
@@ -277,7 +277,7 @@ export default function DJDashboard() {
               <h3 style={{ marginBottom: '1rem' }}>Post Precedenti</h3>
               <div style={{ background: 'rgba(0,0,0,0.3)', padding: '1.5rem', borderRadius: '8px', borderLeft: '4px solid #00f0ff' }}>
                 <span style={{ fontSize: '0.8rem', color: '#00f0ff', fontWeight: 'bold' }}>Esclusiva <img src="/coin.jpg" alt="FPM Coin" style={{ height: "1.2em", borderRadius: "50%", verticalAlign: "middle", margin: "0 5px" }} /> Holders</span>
-                <p style={{ marginTop: '10px' }}>Grazie a tutti per aver mintato la nuova traccia! Sto lavorando al prossimo drop, preparate i wallet. Vi lascio qui un link per scaricare un sample pack gratuito della traccia.</p>
+                <p style={{ marginTop: '10px' }}>Grazie a All per aver mintato la nuova Track! Sto lavorando al prossimo drop, preparate i wallet. Vi lascio qui un link per sUploadre un sample pack gratuito della Track.</p>
                 <span style={{ fontSize: '0.8rem', color: 'var(--text-main)' }}>Oggi, 14:30 - Visto da 850 fan</span>
               </div>
             </div>
@@ -293,7 +293,7 @@ export default function DJDashboard() {
                 <span style={{ fontWeight: 'bold', color: '#00ff88' }}>+342</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span style={{ color: 'var(--text-main)' }}>Messaggi Letti</span>
+                <span style={{ color: 'var(--text-main)' }}>Messages Letti</span>
                 <span style={{ fontWeight: 'bold' }}>82%</span>
               </div>
             </div>
@@ -304,7 +304,7 @@ export default function DJDashboard() {
         {activeTab === 'live' && (
           <div className="glass-panel" style={{ padding: '2rem', maxWidth: '800px', border: '2px solid #ff3366', boxShadow: '0 0 20px rgba(255,51,102,0.2)' }}>
             <h2 style={{ marginBottom: '1.5rem', color: '#ff3366' }}>ðŸ”´ Live Rooms (Listening Parties)</h2>
-            <p style={{ color: 'var(--text-main)', marginBottom: '2rem' }}>Fai ascoltare le tue tracce in anteprima esclusiva ai tuoi possessori di Token. Nessun link esterno, tutto in-app.</p>
+            <p style={{ color: 'var(--text-main)', marginBottom: '2rem' }}>Fai ascoltare le tue Tracks in anteprima esclusiva ai tuoi possessori di Token. Nessun link esterno, tutto in-app.</p>
             
             <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '2rem' }}>
               <div>
@@ -316,7 +316,7 @@ export default function DJDashboard() {
                 <label style={{ display: 'block', marginBottom: '5px', color: 'var(--text-main)' }}>Token Gate (Requisito di Accesso)</label>
                 <select style={{ width: '100%', padding: '15px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(0,0,0,0.5)', color: 'white' }}>
                   <option>Holders di <img src="/coin.jpg" alt="FPM Coin" style={{ height: "1.2em", borderRadius: "50%", verticalAlign: "middle", margin: "0 5px" }} /> (Qualsiasi quantitÃ )</option>
-                  <option>Holders di <img src="/coin.jpg" alt="FPM Coin" style={{ height: "1.2em", borderRadius: "50%", verticalAlign: "middle", margin: "0 5px" }} />-DRK (Traccia Singola)</option>
+                  <option>Holders di <img src="/coin.jpg" alt="FPM Coin" style={{ height: "1.2em", borderRadius: "50%", verticalAlign: "middle", margin: "0 5px" }} />-DRK (Track Singola)</option>
                   <option>VIP Solo Top 10% Holders</option>
                 </select>
               </div>
@@ -343,7 +343,7 @@ export default function DJDashboard() {
                     <h3 style={{ margin: 0 }}>TechnoFan_99</h3>
                     <span style={{ background: '#FFD700', color: 'black', padding: '3px 8px', borderRadius: '12px', fontSize: '0.7rem', fontWeight: 'bold' }}>ðŸ’Ž DIAMOND FAN</span>
                   </div>
-                  <p style={{ margin: '0 0 10px 0', fontSize: '1.1rem' }}><strong>Richiesta:</strong> Ascolto & Feedback Tracce (1 Ora)</p>
+                  <p style={{ margin: '0 0 10px 0', fontSize: '1.1rem' }}><strong>Richiesta:</strong> Ascolto & Feedback Tracks (1 Ora)</p>
                   <div style={{ background: 'rgba(0,0,0,0.5)', padding: '15px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '1rem' }}>
                     <p style={{ margin: 0, fontStyle: 'italic', color: '#ddd' }}>"Ciao VINIL! Sono un tuo fan storico. Vorrei farti ascoltare il mio ultimo EP techno e ricevere qualche tuo consiglio sulle frequenze basse. Grazie!"</p>
                   </div>
@@ -366,7 +366,7 @@ export default function DJDashboard() {
                   âœ… Accetta & Avvia Video Call
                 </button>
                 <button style={{ padding: '15px 30px', background: 'transparent', color: '#ff3366', border: '1px solid #ff3366', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer' }}>
-                  âŒ Rifiuta (Rimborsa Fan)
+                  âŒ Rifiuta (RimExchange Fan)
                 </button>
               </div>
             </div>

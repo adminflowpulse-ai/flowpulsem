@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState, useEffect } from 'react';
 import Link from "next/link";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
@@ -71,11 +71,11 @@ export default function Navbar() {
       </div>
 
       <nav style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', width: '100%', maxWidth: '100%', overflowX: 'auto', paddingBottom: '0.5rem', whiteSpace: 'nowrap', boxSizing: 'border-box' }}>
-        <Link href="/" className="nav-link">Discover</Link><Link href="/profile" className="nav-link" style={{ color: "#fff", fontWeight: "bold", background: "rgba(255,255,255,0.1)", padding: "2px 8px", borderRadius: "5px" }}>Profilo</Link>
+        <Link href="/" className="nav-link">Discover</Link><Link href="/profile" className="nav-link" style={{ color: "#fff", fontWeight: "bold", background: "rgba(255,255,255,0.1)", padding: "2px 8px", borderRadius: "5px" }}>Profile</Link>
         <Link href="/feed" className="nav-link" style={{ color: 'var(--accent-green)', fontWeight: 'bold' }}>Flow Feed</Link>
         <Link href="/artists" className="nav-link">Artists</Link>
-        <Link href="/marketplace" className="nav-link">Marketplace</Link>
-        <Link href="/compravendita" className="nav-link" style={{ color: 'var(--accent-blue)', fontWeight: 'bold' }}>Compravendita</Link>
+        <Link href="/Marketplace" className="nav-link">Marketplace</Link>
+        <Link href="/compraSellta" className="nav-link" style={{ color: 'var(--accent-blue)', fontWeight: 'bold' }}>CompraSellta</Link>
         <Link href="/mixer" className="nav-link" style={{ color: 'var(--accent-red)', fontWeight: 'bold' }}>Web3 Mixer</Link>
         <Link href="/drops" className="nav-link" style={{ color: 'var(--accent-green)' }}>Geo-Drops</Link>
         <Link href="/governance" className="nav-link" style={{ color: 'var(--accent-blue)' }}>DAO</Link>

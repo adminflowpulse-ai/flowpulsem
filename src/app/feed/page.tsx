@@ -10,7 +10,7 @@ const feedPosts = [
     handle: "@davidesquillace",
     avatar: "https://images.unsplash.com/photo-1571266028243-cb40fce7573b?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
     time: "2 ore fa",
-    content: "Studio session finita. Ho appena mintato gli Stems della nuova traccia 'Ibiza Sunrise'. Chi detiene il mio Fan Token può scaricarli in alta qualità ora. 🔥",
+    content: "Studio session finita. Ho appena mintato gli Stems della nuova Track 'Ibiza Sunrise'. Chi detiene il mio Fan Token può sUploadrli in alta qualità ora. 🔥",
     image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
     audio: true,
     likes: 1205,
@@ -96,7 +96,7 @@ export default function FlowFeed() {
                 {post.locked && (
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'rgba(0,0,0,0.5)' }}>
                     <span style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔒</span>
-                    <p style={{ margin: '0 0 1rem', fontWeight: 'bold' }}>Contenuto Esclusivo Holders</p>
+                    <p style={{ margin: '0 0 1rem', fontWeight: 'bold' }}>Exclusive Content Holders</p>
                     <button className="btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                       Sblocca con {post.price} <img src="/coin.jpg" alt="FPM" style={{ height: "1.2em", borderRadius: "50%" }} />
                     </button>
@@ -132,7 +132,7 @@ export default function FlowFeed() {
               
               {!post.locked && (
                 <button style={{ background: 'rgba(27, 97, 255, 0.2)', border: '1px solid var(--accent-blue)', color: '#fff', padding: '5px 15px', borderRadius: '20px', fontSize: '0.9rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '5px' }}>
-                  Supporta {post.price} <img src="/coin.jpg" alt="FPM" style={{ height: "1.2em", borderRadius: "50%" }} />
+                  Support {post.price} <img src="/coin.jpg" alt="FPM" style={{ height: "1.2em", borderRadius: "50%" }} />
                 </button>
               )}
             </div>

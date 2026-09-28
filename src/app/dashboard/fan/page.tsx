@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState, useRef } from 'react';
 import Navbar from "@/components/Navbar";
 import * as Tone from 'tone';
@@ -98,7 +98,7 @@ export default function FanDashboard() {
         {/* Tab Content: COLLECTION */}
         {activeTab === 'collection' && (
           <div>
-            <h2 style={{ marginBottom: '1.5rem' }}>Musica Acquistata (Web3 Vault)</h2>
+            <h2 style={{ marginBottom: '1.5rem' }}>Musica Buyta (Web3 Vault)</h2>
             <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
               {collection.map(item => (
                 <div key={item.id} className="glass-panel" style={{ width: '280px', padding: '1.5rem', transition: 'transform 0.2s', cursor: 'pointer', position: 'relative' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'none'}>
@@ -166,8 +166,8 @@ export default function FanDashboard() {
                 </div>
                 <span style={{ color: 'var(--text-main)', fontSize: '0.8rem' }}>2 ore fa</span>
               </div>
-              <p>Grazie a tutti per aver mintato la nuova traccia! Sto lavorando al prossimo drop, preparate i wallet. Vi lascio qui un link per scaricare un sample pack gratuito della traccia.</p>
-              <button style={{ marginTop: '1rem', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', padding: '10px 20px', color: 'white', borderRadius: '20px', cursor: 'pointer' }}>ðŸ”— Scarica Sample Pack</button>
+              <p>Grazie a All per aver mintato la nuova Track! Sto lavorando al prossimo drop, preparate i wallet. Vi lascio qui un link per sUploadre un sample pack gratuito della Track.</p>
+              <button style={{ marginTop: '1rem', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', padding: '10px 20px', color: 'white', borderRadius: '20px', cursor: 'pointer' }}>ðŸ”— SUpload Sample Pack</button>
             </div>
           </div>
         )}
@@ -259,7 +259,7 @@ export default function FanDashboard() {
             <h2 style={{ marginBottom: '1rem', color: '#00f0ff', textShadow: '0 0 10px rgba(0,240,255,0.5)' }}>ðŸ’Ž Privilegi Diamond: 1-on-1 Experiences</h2>
             <p style={{ color: 'var(--text-main)', marginBottom: '2rem', fontSize: '1.1rem' }}>
               Essendo nel Top 1% dei supporter, hai sbloccato l'accesso diretto ai tuoi idoli. 
-              Richiedi una Masterclass, un Feedback sulle tue tracce o una Chiacchierata privata in Video Call.
+              Richiedi una Masterclass, un Feedback sulle tue Tracks o una Chiacchierata privata in Video Call.
             </p>
 
             <div className="glass-panel" style={{ padding: '2rem', border: '1px solid rgba(0, 240, 255, 0.3)', boxShadow: '0 0 30px rgba(0, 240, 255, 0.1)' }}>
@@ -279,7 +279,7 @@ export default function FanDashboard() {
                     <label style={{ display: 'block', marginBottom: '8px', color: 'var(--text-main)' }}>Tipo di Esperienza (1 Ora)</label>
                     <select style={{ width: '100%', padding: '15px', borderRadius: '8px', background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.2)', color: 'white', fontSize: '1rem' }}>
                       <option>Masterclass di Produzione</option>
-                      <option>Ascolto & Feedback Tracce (A&R)</option>
+                      <option>Ascolto & Feedback Tracks (A&R)</option>
                       <option>Chiacchierata Privata</option>
                     </select>
                   </div>
@@ -313,7 +313,7 @@ export default function FanDashboard() {
                     Invia Richiesta & Blocca Fondi
                   </button>
                   <p style={{ textAlign: 'center', fontSize: '0.8rem', color: 'var(--text-main)', marginTop: '1rem' }}>
-                    I fondi verranno bloccati nello Smart Contract. Se il DJ rifiuta, verranno rimborsati istantaneamente.
+                    I fondi verranno bloccati nello Smart Contract. Se il DJ rifiuta, verranno rimExchangeti istantaneamente.
                   </p>
                 </div>
               </div>
@@ -322,7 +322,7 @@ export default function FanDashboard() {
             <h3 style={{ marginTop: '3rem', marginBottom: '1.5rem' }}>Richieste in Sospeso</h3>
             <div style={{ background: 'rgba(255,255,255,0.05)', padding: '1rem 2rem', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div>
-                <strong>Seleziona Artista</strong> - Ascolto & Feedback Tracce
+                <strong>Seleziona Artista</strong> - Ascolto & Feedback Tracks
                 <p style={{ margin: '5px 0 0 0', fontSize: '0.8rem', color: 'var(--text-main)' }}>Inviata il: 11 Set 2026</p>
               </div>
               <span style={{ background: 'rgba(255, 215, 0, 0.2)', color: '#FFD700', padding: '5px 15px', borderRadius: '15px', fontSize: '0.9rem', fontWeight: 'bold' }}>â³ In attesa di Risposta</span>
@@ -340,7 +340,7 @@ export default function FanDashboard() {
             </div>
             
             <div style={{ display: 'flex', gap: '1rem' }}>
-              <button className="btn-primary" style={{ flex: 1, padding: '15px' }}>Acquista <img src="/coin.jpg" alt="FPM Coin" style={{ height: "1.2em", borderRadius: "50%", verticalAlign: "middle", margin: "0 5px" }} /></button>
+              <button className="btn-primary" style={{ flex: 1, padding: '15px' }}>Buy <img src="/coin.jpg" alt="FPM Coin" style={{ height: "1.2em", borderRadius: "50%", verticalAlign: "middle", margin: "0 5px" }} /></button>
               <button style={{ flex: 1, padding: '15px', background: 'transparent', border: '1px solid var(--accent-primary)', color: 'white', borderRadius: '8px' }}>Preleva</button>
             </div>
           </div>
