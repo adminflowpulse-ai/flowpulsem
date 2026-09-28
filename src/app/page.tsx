@@ -25,7 +25,7 @@ export default function PreLaunchWall() {
       
     if (error) {
       if (error.code === '23505') {
-         setErrorMsg('Questa email ÃƒÆ’Ã‚Â¨ giÃƒÆ’Ã‚Â  in lista d\'attesa!');
+         setErrorMsg('Questa email ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨ giÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  in lista d\'attesa!');
       } else {
          setErrorMsg(t('Errore di connessione. Riprova.'));
          console.error(error);
@@ -58,12 +58,12 @@ export default function PreLaunchWall() {
         {isSubmitted ? (
           <div style={{ padding: '2rem', backgroundColor: 'rgba(0, 255, 51, 0.1)', border: '1px solid var(--accent-green)', borderRadius: '10px', marginBottom: '2rem' }}>
             <h3 style={{ color: 'var(--accent-green)', marginTop: 0 }}>{t('Benvenuto a Bordo!')}</h3>
-            <p style={{ color: '#ddd', marginBottom: 0 }}>{t('La tua email')} ({email}) {t('Ã¨ stata aggiunta alla lista prioritaria.')} {t('Ti contatteremo non appena i server saranno aperti al pubblico.')}</p>
+            <p style={{ color: '#ddd', marginBottom: 0 }}>{t('La tua email')} ({email}) {t('ÃƒÂ¨ stata aggiunta alla lista prioritaria.')} {t('Ti contatteremo non appena i server saranno aperti al pubblico.')}</p>
           </div>
         ) : (
           <>
             <p style={{ color: 'var(--text-main)', lineHeight: '1.5', marginBottom: '2rem' }}>
-              {t('La piattaforma Ã¨ attualmente in fase di Closed Beta.')}
+              {t('La piattaforma ÃƒÂ¨ attualmente in fase di Closed Beta.')}
               {t('Lascia la tua email per entrare in lista d''attesa.')}
             </p>
 
@@ -91,13 +91,13 @@ export default function PreLaunchWall() {
           <Link href="/dashboard/dj" style={{ padding: '20px 30px', borderRadius: '15px', backgroundColor: 'transparent', border: '2px solid var(--accent-blue)', color: '#fff', textDecoration: 'none', fontWeight: 'bold', fontSize: '1.4rem', transition: 'all 0.3s', textAlign: 'center' }}
                 onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'var(--accent-blue)'; e.currentTarget.style.boxShadow = '0 0 15px rgba(27, 97, 255, 0.5)'; }}
                 onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.boxShadow = 'none'; }}>
-            ÃƒÂ°Ã…Â¸Ã…Â½Ã‚Â§ SONO UN DJ (Connetti Wallet)
+            ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸Ãƒâ€¦Ã‚Â½Ãƒâ€šÃ‚Â§ SONO UN DJ (Connetti Wallet)
           </Link>
           
           <Link href="/dashboard/fan" style={{ padding: '20px 30px', borderRadius: '15px', backgroundColor: 'transparent', border: '2px solid var(--accent-green)', color: '#fff', textDecoration: 'none', fontWeight: 'bold', fontSize: '1.4rem', transition: 'all 0.3s', textAlign: 'center' }}
                 onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'var(--accent-green)'; e.currentTarget.style.boxShadow = '0 0 15px rgba(0, 255, 51, 0.5)'; }}
                 onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.boxShadow = 'none'; }}>
-            ÃƒÂ°Ã…Â¸Ã…Â½Ã‚Âµ SONO UN FAN (Connetti Wallet)
+            ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸Ãƒâ€¦Ã‚Â½Ãƒâ€šÃ‚Âµ SONO UN FAN (Connetti Wallet)
           </Link>
           
           <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'center' }}>
