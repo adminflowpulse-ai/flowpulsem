@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -32,7 +32,7 @@ export default function Home() {
         setIsSuccess(true);
       } else {
         if (data.error === 'Email already exists') {
-          setErrorMsg(t("Questa email è già in lista d'attesa!"));
+          setErrorMsg(t("Questa email Ã¨ giÃ  in lista d'attesa!"));
         } else {
           setErrorMsg(t("Errore di connessione. Riprova."));
         }
@@ -51,7 +51,7 @@ export default function Home() {
         <h1 style={{ fontFamily: "'Dancing Script', cursive", margin: 0, fontSize: 'clamp(4rem, 10vw, 8rem)', fontWeight: 700, letterSpacing: '3px', display: 'flex', alignItems: 'baseline', justifyContent: 'center' }}>
             <span style={{ background: 'linear-gradient(90deg, var(--accent-blue), var(--accent-green))', WebkitBackgroundClip: 'text', color: 'transparent', paddingRight: '5px' }}>FlowPulse</span>
             <span style={{ color: 'var(--accent-red)', textShadow: '0 0 20px rgba(255,0,60,0.7)' }}>M</span>
-            <sup style={{ color: 'var(--accent-red)', fontSize: 'clamp(1rem, 4vw, 2rem)', marginLeft: '4px', textShadow: 'none' }}>®</sup>
+            <sup style={{ color: 'var(--accent-red)', fontSize: 'clamp(1rem, 4vw, 2rem)', marginLeft: '4px', textShadow: 'none' }}>Â®</sup>
         </h1>
         <p style={{ color: 'var(--text-main)', fontSize: '1.2rem', marginTop: '10px', letterSpacing: '2px', textTransform: 'uppercase' }}>
           {t("La Nuova Era dell'Industria Musicale")}
@@ -65,7 +65,7 @@ export default function Home() {
           <div style={{ padding: '30px 0' }}>
             <h3 style={{ color: 'var(--accent-green)', fontSize: '1.5rem', marginBottom: '15px' }}>{t("Benvenuto a Bordo!")}</h3>
             <p style={{ color: 'var(--text-main)', lineHeight: '1.6' }}>
-              {t("La tua email")} <strong style={{ color: '#fff' }}>{email}</strong> {t("è stata aggiunta alla lista prioritaria.")}
+              {t("La tua email")} <strong style={{ color: '#fff' }}>{email}</strong> {t("Ã¨ stata aggiunta alla lista prioritaria.")}
             </p>
             <p style={{ color: 'var(--text-main)', lineHeight: '1.6', marginTop: '15px' }}>
               {t("Ti contatteremo non appena i server saranno aperti al pubblico.")}
@@ -74,7 +74,7 @@ export default function Home() {
         ) : (
           <>
             <p style={{ color: 'var(--text-main)', lineHeight: '1.5', marginBottom: '2rem' }}>
-              {t("La piattaforma è attualmente in fase di Closed Beta.")}<br/>
+              {t("La piattaforma Ã¨ attualmente in fase di Closed Beta.")}<br/>
               {t("Lascia la tua email per entrare in lista d'attesa.")}
             </p>
 
@@ -100,12 +100,12 @@ export default function Home() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <Link href="/dashboard/dj" style={{ textDecoration: 'none' }}>
               <button style={{ width: '100%', padding: '15px', borderRadius: '12px', backgroundColor: 'transparent', border: '1px solid var(--accent-blue)', color: '#fff', cursor: 'pointer', fontWeight: 'bold', transition: 'all 0.2s' }}>
-                🎧 {t("SONO UN DJ (Connetti Wallet)")}
+                ðŸŽ§ {t("SONO UN DJ (Connetti Wallet)")}
               </button>
             </Link>
             <Link href="/dashboard/fan" style={{ textDecoration: 'none' }}>
               <button style={{ width: '100%', padding: '15px', borderRadius: '12px', backgroundColor: 'transparent', border: '1px solid var(--accent-green)', color: '#fff', cursor: 'pointer', fontWeight: 'bold', transition: 'all 0.2s' }}>
-                🎵 {t("SONO UN FAN (Connetti Wallet)")}
+                ðŸŽµ {t("SONO UN FAN (Connetti Wallet)")}
               </button>
             </Link>
           </div>
