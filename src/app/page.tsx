@@ -32,7 +32,7 @@ export default function Home() {
         setIsSuccess(true);
       } else {
         if (data.error === 'Email already exists') {
-          setErrorMsg(t("Questa email Ã¨ giÃ  in lista d'attesa!"));
+          setErrorMsg(t("Questa email è giÃ  in lista d'attesa!"));
         } else {
           setErrorMsg(t("Errore di connessione. Riprova."));
         }
@@ -48,11 +48,7 @@ export default function Home() {
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '20px', fontFamily: 'var(--font-body)', position: 'relative', overflow: 'hidden' }}>
       
       <div style={{ textAlign: 'center', marginBottom: '40px', zIndex: 10 }}>
-        <h1 style={{ fontFamily: "'Dancing Script', cursive", margin: 0, fontSize: 'clamp(4rem, 10vw, 8rem)', fontWeight: 700, letterSpacing: '3px', display: 'flex', alignItems: 'baseline', justifyContent: 'center' }}>
-            <span style={{ background: 'linear-gradient(90deg, var(--accent-blue), var(--accent-green))', WebkitBackgroundClip: 'text', color: 'transparent', paddingRight: '5px' }}>FlowPulse</span>
-            <span style={{ color: 'var(--accent-red)', textShadow: '0 0 20px rgba(255,0,60,0.7)' }}>M</span>
-            <sup style={{ color: 'var(--accent-red)', fontSize: 'clamp(1rem, 4vw, 2rem)', marginLeft: '4px', textShadow: 'none' }}>Â®</sup>
-        </h1>
+        <img src="/logo.png" alt="FlowPulseM Logo" style={{ width: "300px", height: "300px", objectFit: "contain", margin: "0 auto", display: "block" }} />
         <p style={{ color: 'var(--text-main)', fontSize: '1.2rem', marginTop: '10px', letterSpacing: '2px', textTransform: 'uppercase' }}>
           {t("La Nuova Era dell'Industria Musicale")}
         </p>
@@ -65,7 +61,7 @@ export default function Home() {
           <div style={{ padding: '30px 0' }}>
             <h3 style={{ color: 'var(--accent-green)', fontSize: '1.5rem', marginBottom: '15px' }}>{t("Benvenuto a Bordo!")}</h3>
             <p style={{ color: 'var(--text-main)', lineHeight: '1.6' }}>
-              {t("La tua email")} <strong style={{ color: '#fff' }}>{email}</strong> {t("Ã¨ stata aggiunta alla lista prioritaria.")}
+              {t("La tua email")} <strong style={{ color: '#fff' }}>{email}</strong> {t("è stata aggiunta alla lista prioritaria.")}
             </p>
             <p style={{ color: 'var(--text-main)', lineHeight: '1.6', marginTop: '15px' }}>
               {t("Ti contatteremo non appena i server saranno aperti al pubblico.")}
@@ -74,7 +70,7 @@ export default function Home() {
         ) : (
           <>
             <p style={{ color: 'var(--text-main)', lineHeight: '1.5', marginBottom: '2rem' }}>
-              {t("La piattaforma Ã¨ attualmente in fase di Closed Beta.")}<br/>
+              {t("La piattaforma è attualmente in fase di Closed Beta.")}<br/>
               {t("Lascia la tua email per entrare in lista d'attesa.")}
             </p>
 
