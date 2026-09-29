@@ -49,7 +49,7 @@ export default function CompravenditaPage() {
 
     } catch (error) {
       console.error(error);
-      alert("Si Ã¨ verificato un errore durante l'acquisto.");
+      alert("Si è verificato un errore durante l'acquisto.");
     } finally {
       setIsProcessing(false);
     }
@@ -104,7 +104,7 @@ export default function CompravenditaPage() {
         {downloadUrl && (
           <div className="glass-panel" style={{ padding: '2rem', marginBottom: '3rem', border: '1px solid #00f0ff', textAlign: 'center' }}>
             <h2 style={{ color: '#00f0ff' }}>Acquisto Completato con Successo! ðŸŽ‰</h2>
-            <p style={{ margin: '1rem 0' }}>La traccia Ã¨ stata trasferita al tuo wallet. Il tuo certificato SIAE nominale Ã¨ pronto.</p>
+            <p style={{ margin: '1rem 0' }}>La traccia è stata trasferita al tuo wallet. Il tuo certificato SIAE nominale è pronto.</p>
             <a href={downloadUrl} download={`SIAE_Certificato_${selectedListing?.title}.pdf`}>
               <button className="btn-primary" style={{ padding: '12px 24px', background: '#00f0ff', color: '#000' }}>
                 Scarica Certificato SIAE (PDF)
