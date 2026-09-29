@@ -48,12 +48,12 @@ export default function FanDashboard() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '3rem' }}>
           <div style={{ width: '100px', height: '100px', borderRadius: '50%', background: 'linear-gradient(45deg, #00f0ff, #fff)', position: 'relative', boxShadow: '0 0 20px rgba(0, 240, 255, 0.5)' }}>
             <div style={{ position: 'absolute', bottom: '-10px', right: '-10px', background: 'linear-gradient(90deg, #00f0ff, #8a2be2)', color: 'white', fontWeight: 'bold', padding: '5px 10px', borderRadius: '15px', fontSize: '0.8rem', border: '2px solid white' }}>
-              ðŸ’Ž DIAMOND TIER
+              💎 DIAMOND TIER
             </div>
           </div>
           <div>
             <h1 style={{ fontSize: '2.5rem', margin: '0 0 5px 0' }}>TechnoFan_99</h1>
-            <p style={{ color: 'var(--text-main)', margin: 0 }}>Membro dal 2026 â€¢ 3 Token in Collezione</p>
+            <p style={{ color: 'var(--text-main)', margin: 0 }}>Membro dal 2026 • 3 Token in Collezione</p>
             <div style={{ marginTop: '10px', width: '300px', background: 'rgba(255,255,255,0.1)', height: '8px', borderRadius: '4px', overflow: 'hidden' }}>
               <div style={{ width: '100%', background: 'linear-gradient(90deg, #00f0ff, #fff)', height: '100%' }}></div>
             </div>
@@ -67,13 +67,13 @@ export default function FanDashboard() {
             onClick={() => setActiveTab('collection')}
             style={{ background: 'none', border: 'none', color: activeTab === 'collection' ? '#00f0ff' : 'var(--text-main)', fontWeight: activeTab === 'collection' ? 'bold' : 'normal', fontSize: '1.2rem', cursor: 'pointer' }}
           >
-            ðŸŽ§ La Mia Collezione
+            🎧 La Mia Collezione
           </button>
           <button 
             onClick={() => setActiveTab('feed')}
             style={{ background: 'none', border: 'none', color: activeTab === 'feed' ? '#00f0ff' : 'var(--text-main)', fontWeight: activeTab === 'feed' ? 'bold' : 'normal', fontSize: '1.2rem', cursor: 'pointer' }}
           >
-            ðŸ“¬ Feed Esclusivo & Live Rooms
+            📺 Feed Esclusivo & Live Rooms
           </button>
           <button 
             onClick={() => setActiveTab('phygital')}
@@ -85,13 +85,13 @@ export default function FanDashboard() {
             onClick={() => setActiveTab('diamond')}
             style={{ background: 'none', border: 'none', color: activeTab === 'diamond' ? '#00f0ff' : 'var(--text-main)', fontWeight: activeTab === 'diamond' ? 'bold' : 'normal', fontSize: '1.2rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', textShadow: activeTab === 'diamond' ? '0 0 10px rgba(0,240,255,0.5)' : 'none' }}
           >
-            ðŸ’Ž Diamond Experiences
+            💎 Diamond Experiences
           </button>
           <button 
             onClick={() => setActiveTab('wallet')}
             style={{ background: 'none', border: 'none', color: activeTab === 'wallet' ? '#00f0ff' : 'var(--text-main)', fontWeight: activeTab === 'wallet' ? 'bold' : 'normal', fontSize: '1.2rem', cursor: 'pointer', marginLeft: 'auto' }}
           >
-            ðŸ’° Wallet Utente
+            💰 Wallet Utente
           </button>
         </div>
 
@@ -150,7 +150,7 @@ export default function FanDashboard() {
                   </div>
                 </div>
                 <button style={{ background: '#ff3366', color: 'white', border: 'none', padding: '10px 25px', borderRadius: '25px', fontWeight: 'bold', cursor: 'pointer', boxShadow: '0 0 15px rgba(255, 51, 102, 0.5)' }}>
-                  ðŸŽ§ Entra nel Club (VIP Only)
+                  🎧 Entra nel Club (VIP Only)
                 </button>
               </div>
             </div>
@@ -256,7 +256,7 @@ export default function FanDashboard() {
         {/* Tab Content: DIAMOND EXPERIENCES */}
         {activeTab === 'diamond' && (
           <div style={{ maxWidth: '900px' }}>
-            <h2 style={{ marginBottom: '1rem', color: '#00f0ff', textShadow: '0 0 10px rgba(0,240,255,0.5)' }}>ðŸ’Ž Privilegi Diamond: 1-on-1 Experiences</h2>
+            <h2 style={{ marginBottom: '1rem', color: '#00f0ff', textShadow: '0 0 10px rgba(0,240,255,0.5)' }}>💎 Privilegi Diamond: 1-on-1 Experiences</h2>
             <p style={{ color: 'var(--text-main)', marginBottom: '2rem', fontSize: '1.1rem' }}>
               Essendo nel Top 1% dei supporter, hai sbloccato l'accesso diretto ai tuoi idoli. 
               Richiedi una Masterclass, un Feedback sulle tue tracce o una Chiacchierata privata in Video Call.

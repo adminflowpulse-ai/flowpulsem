@@ -68,7 +68,7 @@ export default function DJDashboard() {
             onClick={() => setActiveTab('bookings')}
             style={{ background: 'none', border: 'none', color: activeTab === 'bookings' ? '#FFD700' : 'var(--text-main)', fontWeight: activeTab === 'bookings' ? 'bold' : 'normal', fontSize: '1.2rem', cursor: 'pointer' }}
           >
-            ðŸ’Ž Bookings (1-on-1)
+            💎 Bookings (1-on-1)
           </button>
           <button 
             onClick={() => setActiveTab('community')}
@@ -333,7 +333,7 @@ export default function DJDashboard() {
         {/* Tab Content: BOOKINGS (1-on-1) */}
         {activeTab === 'bookings' && (
           <div style={{ maxWidth: '900px' }}>
-            <h2 style={{ marginBottom: '1rem', color: '#FFD700' }}>ðŸ’Ž Gestione Bookings 1-on-1</h2>
+            <h2 style={{ marginBottom: '1rem', color: '#FFD700' }}>💎 Gestione Bookings 1-on-1</h2>
             <p style={{ color: 'var(--text-main)', marginBottom: '2rem' }}>Le richieste dei tuoi Superfan di livello Diamond. Trattieni il 100% dell'incasso.</p>
             
             <div className="glass-panel" style={{ padding: '2rem', marginBottom: '2rem', borderLeft: '4px solid #FFD700' }}>
@@ -341,7 +341,7 @@ export default function DJDashboard() {
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
                     <h3 style={{ margin: 0 }}>TechnoFan_99</h3>
-                    <span style={{ background: '#FFD700', color: 'black', padding: '3px 8px', borderRadius: '12px', fontSize: '0.7rem', fontWeight: 'bold' }}>ðŸ’Ž DIAMOND FAN</span>
+                    <span style={{ background: '#FFD700', color: 'black', padding: '3px 8px', borderRadius: '12px', fontSize: '0.7rem', fontWeight: 'bold' }}>💎 DIAMOND FAN</span>
                   </div>
                   <p style={{ margin: '0 0 10px 0', fontSize: '1.1rem' }}><strong>Richiesta:</strong> Ascolto & Feedback Tracce (1 Ora)</p>
                   <div style={{ background: 'rgba(0,0,0,0.5)', padding: '15px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '1rem' }}>
