@@ -1,21 +1,22 @@
-'use client';
+﻿'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useLanguage, Language } from './LanguageProvider';
 
 const languageFlags: Record<Language, { flag: string, name: string }> = {
-  it: { flag: '🇮🇹', name: 'IT' },
-  en: { flag: '🇬🇧', name: 'EN' },
-  es: { flag: '🇪🇸', name: 'ES' },
-  fr: { flag: '🇫🇷', name: 'FR' },
-  de: { flag: '🇩🇪', name: 'DE' },
-  ru: { flag: '🇷🇺', name: 'RU' },
-  ja: { flag: '🇯🇵', name: 'JA' },
-  zh: { flag: '🇨🇳', name: 'ZH' },
-  ko: { flag: '🇰🇷', name: 'KO' },
-  hi: { flag: '🇮🇳', name: 'HI' }
+  it: { flag: '\uD83C\uDDEE\uD83C\uDDF9', name: 'IT' },
+  en: { flag: '\uD83C\uDDEC\uD83C\uDDE7', name: 'EN' },
+  es: { flag: '\uD83C\uDDEA\uD83C\uDDF8', name: 'ES' },
+  fr: { flag: '\uD83C\uDDEB\uD83C\uDDF7', name: 'FR' },
+  de: { flag: '\uD83C\uDDE9\uD83C\uDDEA', name: 'DE' },
+  ru: { flag: '\uD83C\uDDF7\uD83C\uDDFA', name: 'RU' },
+  ja: { flag: '\uD83C\uDDEF\uD83C\uDDF5', name: 'JA' },
+  zh: { flag: '\uD83C\uDDE8\uD83C\uDDF3', name: 'ZH' },
+  ko: { flag: '\uD83C\uDDF0\uD83C\uDDF7', name: 'KO' },
+  hi: { flag: '\uD83C\uDDEE\uD83C\uDDF3', name: 'HI' }
 };
 
 export default function Navbar() {
@@ -23,22 +24,26 @@ export default function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
 
   return (
-    <nav style={{ padding: '20px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'var(--surface-color)', borderBottom: '1px solid rgba(255,255,255,0.1)', flexWrap: 'wrap', gap: '20px' }}>
+    <nav style={{ padding: '15px 30px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'var(--surface-color)', borderBottom: '1px solid rgba(255,255,255,0.1)', flexWrap: 'wrap', gap: '15px' }}>
       
-      {/* Logo */}
-      <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-        <h1 style={{ fontFamily: "'Dancing Script', cursive", margin: 0, fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: 700, letterSpacing: '2px' }}>
-          <span style={{ background: 'linear-gradient(90deg, var(--accent-blue), var(--accent-green))', WebkitBackgroundClip: 'text', color: 'transparent', paddingRight: '2px' }}>FlowPulse</span>
-          <span style={{ color: 'var(--accent-red)', textShadow: '0 0 10px rgba(255,0,60,0.5)' }}>M</span>
+      {/* Logo from Image */}
+      <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <img src="/logo.png" alt="FlowPulseM Logo" style={{ width: '60px', height: '60px', objectFit: 'contain' }} />
+        <h1 style={{ fontFamily: \"'Dancing Script', cursive\", margin: 0, fontSize: '2rem', fontWeight: 700, display: 'none' }}>
+          FlowPulseM
         </h1>
       </Link>
 
-      {/* Links Center */}
-      <div style={{ display: 'flex', gap: '30px', alignItems: 'center' }}>
-        <Link href="/feed" style={{ color: 'var(--text-main)', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 600, transition: 'color 0.2s' }}>{t('Feed')}</Link>
-        <Link href="/artists" style={{ color: 'var(--text-main)', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 600, transition: 'color 0.2s' }}>{t('Artisti')}</Link>
-        <Link href="/explore" style={{ color: 'var(--text-main)', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 600, transition: 'color 0.2s' }}>{t('Esplora')}</Link>
-        <Link href="/marketplace" style={{ color: 'var(--text-main)', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 600, transition: 'color 0.2s' }}>{t('Mercato')}</Link>
+      {/* Links Center - Restored All The Features */}
+      <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center', flex: 1 }}>
+        <Link href="/feed" style={{ color: 'var(--accent-green)', textDecoration: 'none', fontSize: '1rem', fontWeight: 'bold' }}>{t('Flow Feed')}</Link>
+        <Link href="/artists" style={{ color: 'var(--text-main)', textDecoration: 'none', fontSize: '1rem', fontWeight: 'bold' }}>{t('Artisti')}</Link>
+        <Link href="/marketplace" style={{ color: 'var(--text-main)', textDecoration: 'none', fontSize: '1rem', fontWeight: 'bold' }}>{t('Marketplace')}</Link>
+        <Link href="/compravendita" style={{ color: 'var(--accent-blue)', textDecoration: 'none', fontSize: '1rem', fontWeight: 'bold' }}>{t('Compravendita')}</Link>
+        <Link href="/mixer" style={{ color: 'var(--accent-red)', textDecoration: 'none', fontSize: '1rem', fontWeight: 'bold' }}>{t('Web3 Mixer')}</Link>
+        <Link href="/drops" style={{ color: 'var(--accent-green)', textDecoration: 'none', fontSize: '1rem', fontWeight: 'bold' }}>{t('Geo-Drops')}</Link>
+        <Link href="/governance" style={{ color: 'var(--accent-blue)', textDecoration: 'none', fontSize: '1rem', fontWeight: 'bold' }}>{t('DAO')}</Link>
+        <Link href="/studio" style={{ color: 'var(--accent-red)', textDecoration: 'none', fontSize: '1rem', fontWeight: 'bold' }}>{t('Studio')}</Link>
       </div>
 
       {/* Right Actions */}
@@ -48,22 +53,21 @@ export default function Navbar() {
         <div style={{ position: 'relative' }}>
           <button 
             onClick={() => setShowDropdown(!showDropdown)}
-            style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '8px', padding: '8px 12px', color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '1rem', minWidth: '70px', justifyContent: 'center' }}
+            style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', padding: '8px 12px', borderRadius: '8px', color: '#fff', cursor: 'pointer', fontSize: '1rem' }}
           >
-            <span style={{ fontSize: '1.2rem' }}>{languageFlags[language].flag}</span>
-            <span>{languageFlags[language].name}</span>
+            {languageFlags[language].flag} {languageFlags[language].name}
+            <span style={{ fontSize: '0.8rem' }}>▼</span>
           </button>
           
           {showDropdown && (
-            <div style={{ position: 'absolute', top: '100%', right: 0, marginTop: '10px', background: 'var(--surface-color)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '10px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5px', zIndex: 100, boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
-              {(Object.keys(languageFlags) as Language[]).map(lang => (
+            <div style={{ position: 'absolute', top: '100%', right: 0, marginTop: '5px', background: '#1a1b23', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', overflow: 'hidden', zIndex: 1000, minWidth: '120px', boxShadow: '0 4px 12px rgba(0,0,0,0.5)' }}>
+              {Object.entries(languageFlags).map(([code, {flag, name}]) => (
                 <button
-                  key={lang}
-                  onClick={() => { setLanguage(lang); setShowDropdown(false); }}
-                  style={{ background: language === lang ? 'rgba(27, 97, 255, 0.2)' : 'transparent', border: 'none', borderRadius: '8px', padding: '8px', color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '1rem', width: '100%', textAlign: 'left', transition: 'background 0.2s' }}
+                  key={code}
+                  onClick={() => { setLanguage(code as Language); setShowDropdown(false); }}
+                  style={{ display: 'block', width: '100%', padding: '10px 15px', background: language === code ? 'rgba(0, 240, 255, 0.1)' : 'transparent', border: 'none', color: '#fff', textAlign: 'left', cursor: 'pointer', transition: 'background 0.2s', fontSize: '1rem' }}
                 >
-                  <span style={{ fontSize: '1.2rem' }}>{languageFlags[lang].flag}</span>
-                  <span style={{ fontWeight: language === lang ? 'bold' : 'normal' }}>{languageFlags[lang].name}</span>
+                  {flag} {name}
                 </button>
               ))}
             </div>
@@ -72,7 +76,6 @@ export default function Navbar() {
 
         <ConnectButton />
       </div>
-
     </nav>
   );
 }
