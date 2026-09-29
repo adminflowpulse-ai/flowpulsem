@@ -29,7 +29,7 @@ export default function Navbar() {
       {/* Logo from Image */}
       <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
         <img src="/logo.png" alt="FlowPulseM Logo" style={{ width: '60px', height: '60px', objectFit: 'contain' }} />
-        <h1 style={{ fontFamily: \"'Dancing Script', cursive\", margin: 0, fontSize: '2rem', fontWeight: 700, display: 'none' }}>
+        <h1 style={{ fontFamily: "'Dancing Script', cursive", margin: 0, fontSize: '2rem', fontWeight: 700, display: 'none' }}>
           FlowPulseM
         </h1>
       </Link>
