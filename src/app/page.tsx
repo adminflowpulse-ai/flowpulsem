@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { useLanguage } from '../components/LanguageProvider';
 
 export default function Home() {
@@ -97,12 +98,16 @@ export default function Home() {
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '30px' }}>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '15px', textTransform: 'uppercase', letterSpacing: '1px' }}>{t("Accesso Web3")}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <button onClick={() => window.location.href = '/dashboard/dj'} style={{ padding: '15px', borderRadius: '12px', backgroundColor: 'transparent', border: '1px solid var(--accent-blue)', color: '#fff', cursor: 'pointer', fontWeight: 'bold', transition: 'all 0.2s' }}>
-              🎧 {t("SONO UN DJ (Connetti Wallet)")}
-            </button>
-            <button onClick={() => window.location.href = '/dashboard/fan'} style={{ padding: '15px', borderRadius: '12px', backgroundColor: 'transparent', border: '1px solid var(--accent-green)', color: '#fff', cursor: 'pointer', fontWeight: 'bold', transition: 'all 0.2s' }}>
-              🎵 {t("SONO UN FAN (Connetti Wallet)")}
-            </button>
+            <Link href="/dashboard/dj" style={{ textDecoration: 'none' }}>
+              <button style={{ width: '100%', padding: '15px', borderRadius: '12px', backgroundColor: 'transparent', border: '1px solid var(--accent-blue)', color: '#fff', cursor: 'pointer', fontWeight: 'bold', transition: 'all 0.2s' }}>
+                🎧 {t("SONO UN DJ (Connetti Wallet)")}
+              </button>
+            </Link>
+            <Link href="/dashboard/fan" style={{ textDecoration: 'none' }}>
+              <button style={{ width: '100%', padding: '15px', borderRadius: '12px', backgroundColor: 'transparent', border: '1px solid var(--accent-green)', color: '#fff', cursor: 'pointer', fontWeight: 'bold', transition: 'all 0.2s' }}>
+                🎵 {t("SONO UN FAN (Connetti Wallet)")}
+              </button>
+            </Link>
           </div>
         </div>
       </div>
