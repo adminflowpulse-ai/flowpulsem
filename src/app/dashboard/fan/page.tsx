@@ -79,7 +79,7 @@ export default function FanDashboard() {
             onClick={() => setActiveTab('phygital')}
             style={{ background: 'none', border: 'none', color: activeTab === 'phygital' ? '#FFD700' : 'var(--text-main)', fontWeight: activeTab === 'phygital' ? 'bold' : 'normal', fontSize: '1.2rem', cursor: 'pointer' }}
           >
-            ðŸ“€ Merch (Phygital)
+            📀 Merch (Phygital)
           </button>
           <button 
             onClick={() => setActiveTab('diamond')}
@@ -108,7 +108,7 @@ export default function FanDashboard() {
                   
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
                     <span style={{ fontSize: '0.8rem', color: '#00f0ff', fontWeight: 'bold', padding: '4px 8px', background: 'rgba(0, 240, 255, 0.1)', borderRadius: '4px' }}>{item.token}</span>
-                    <button style={{ background: 'var(--accent-gradient)', border: 'none', borderRadius: '50%', width: '35px', height: '35px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'white', cursor: 'pointer' }}>â–¶</button>
+                    <button style={{ background: 'var(--accent-gradient)', border: 'none', borderRadius: '50%', width: '35px', height: '35px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'white', cursor: 'pointer' }}>▶</button>
                   </div>
 
                   {/* DAW Bridge Button */}
@@ -167,7 +167,7 @@ export default function FanDashboard() {
                 <span style={{ color: 'var(--text-main)', fontSize: '0.8rem' }}>2 ore fa</span>
               </div>
               <p>Grazie a tutti per aver mintato la nuova traccia! Sto lavorando al prossimo drop, preparate i wallet. Vi lascio qui un link per scaricare un sample pack gratuito della traccia.</p>
-              <button style={{ marginTop: '1rem', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', padding: '10px 20px', color: 'white', borderRadius: '20px', cursor: 'pointer' }}>ðŸ”— Scarica Sample Pack</button>
+              <button style={{ marginTop: '1rem', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', padding: '10px 20px', color: 'white', borderRadius: '20px', cursor: 'pointer' }}>🔗 Scarica Sample Pack</button>
             </div>
           </div>
         )}

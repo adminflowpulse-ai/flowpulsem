@@ -96,12 +96,12 @@ export default function Home() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <Link href="/dashboard/dj" style={{ textDecoration: 'none' }}>
               <button style={{ width: '100%', padding: '15px', borderRadius: '12px', backgroundColor: 'transparent', border: '1px solid var(--accent-blue)', color: '#fff', cursor: 'pointer', fontWeight: 'bold', transition: 'all 0.2s' }}>
-                ðŸŽ§ {t("SONO UN DJ (Connetti Wallet)")}
+                🎧 {t("SONO UN DJ (Connetti Wallet)")}
               </button>
             </Link>
             <Link href="/dashboard/fan" style={{ textDecoration: 'none' }}>
               <button style={{ width: '100%', padding: '15px', borderRadius: '12px', backgroundColor: 'transparent', border: '1px solid var(--accent-green)', color: '#fff', cursor: 'pointer', fontWeight: 'bold', transition: 'all 0.2s' }}>
-                ðŸŽµ {t("SONO UN FAN (Connetti Wallet)")}
+                🎵 {t("SONO UN FAN (Connetti Wallet)")}
               </button>
             </Link>
           </div>

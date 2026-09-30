@@ -50,19 +50,19 @@ export default function DJDashboard() {
             onClick={() => setActiveTab('finance')}
             style={{ background: 'none', border: 'none', color: activeTab === 'finance' ? '#00f0ff' : 'var(--text-main)', fontWeight: activeTab === 'finance' ? 'bold' : 'normal', fontSize: '1.2rem', cursor: 'pointer' }}
           >
-            ðŸ“Š Finanza & LiquiditÃ 
+            📊 Finanza & LiquiditÃ 
           </button>
           <button 
             onClick={() => setActiveTab('profile')}
             style={{ background: 'none', border: 'none', color: activeTab === 'profile' ? '#00f0ff' : 'var(--text-main)', fontWeight: activeTab === 'profile' ? 'bold' : 'normal', fontSize: '1.2rem', cursor: 'pointer' }}
           >
-            ðŸ‘¤ Profilo Artista & Vetrina
+            👤 Profilo Artista & Vetrina
           </button>
           <button 
             onClick={() => setActiveTab('live')}
             style={{ background: 'none', border: 'none', color: activeTab === 'live' ? '#ff3366' : 'var(--text-main)', fontWeight: activeTab === 'live' ? 'bold' : 'normal', fontSize: '1.2rem', cursor: 'pointer' }}
           >
-            ðŸ”´ Live Rooms
+            🔴 Live Rooms
           </button>
           <button 
             onClick={() => setActiveTab('bookings')}
@@ -74,7 +74,7 @@ export default function DJDashboard() {
             onClick={() => setActiveTab('community')}
             style={{ background: 'none', border: 'none', color: activeTab === 'community' ? '#00f0ff' : 'var(--text-main)', fontWeight: activeTab === 'community' ? 'bold' : 'normal', fontSize: '1.2rem', cursor: 'pointer' }}
           >
-            ðŸ‘¥ Gestione Community
+            👥 Gestione Community
           </button>
         </div>
 
@@ -266,8 +266,8 @@ export default function DJDashboard() {
               
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div style={{ display: 'flex', gap: '10px' }}>
-                  <button style={{ background: 'rgba(255,255,255,0.1)', border: 'none', color: 'white', padding: '10px', borderRadius: '5px', cursor: 'pointer' }}>ðŸ“· Allega Immagine</button>
-                  <button style={{ background: 'rgba(255,255,255,0.1)', border: 'none', color: 'white', padding: '10px', borderRadius: '5px', cursor: 'pointer' }}>ðŸŽµ Allega Demo Audio</button>
+                  <button style={{ background: 'rgba(255,255,255,0.1)', border: 'none', color: 'white', padding: '10px', borderRadius: '5px', cursor: 'pointer' }}>📸 Allega Immagine</button>
+                  <button style={{ background: 'rgba(255,255,255,0.1)', border: 'none', color: 'white', padding: '10px', borderRadius: '5px', cursor: 'pointer' }}>🎵 Allega Demo Audio</button>
                 </div>
                 <button className="btn-primary" style={{ padding: '10px 20px' }}>Pubblica ai Token Holders</button>
               </div>
@@ -303,7 +303,7 @@ export default function DJDashboard() {
         {/* Tab Content: LIVE ROOMS */}
         {activeTab === 'live' && (
           <div className="glass-panel" style={{ padding: '2rem', maxWidth: '800px', border: '2px solid #ff3366', boxShadow: '0 0 20px rgba(255,51,102,0.2)' }}>
-            <h2 style={{ marginBottom: '1.5rem', color: '#ff3366' }}>ðŸ”´ Live Rooms (Listening Parties)</h2>
+            <h2 style={{ marginBottom: '1.5rem', color: '#ff3366' }}>🔴 Live Rooms (Listening Parties)</h2>
             <p style={{ color: 'var(--text-main)', marginBottom: '2rem' }}>Fai ascoltare le tue tracce in anteprima esclusiva ai tuoi possessori di Token. Nessun link esterno, tutto in-app.</p>
             
             <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '2rem' }}>
@@ -325,7 +325,7 @@ export default function DJDashboard() {
             <button 
               onClick={() => alert("Sei ON AIR! I fan riceveranno la notifica per entrare.")}
               style={{ width: '100%', padding: '20px', background: 'linear-gradient(45deg, #ff3366, #ff0000)', border: 'none', borderRadius: '10px', color: 'white', fontSize: '1.5rem', fontWeight: 'bold', cursor: 'pointer', boxShadow: '0 0 20px rgba(255,0,0,0.5)' }}>
-              ðŸ”´ GO LIVE NOW
+              🔴 GO LIVE NOW
             </button>
           </div>
         )}
@@ -363,7 +363,7 @@ export default function DJDashboard() {
                   }}
                   style={{ flex: 1, padding: '15px', background: '#00ff88', color: 'black', border: 'none', borderRadius: '8px', fontWeight: 'bold', fontSize: '1.1rem', cursor: 'pointer' }}
                 >
-                  âœ… Accetta & Avvia Video Call
+                  ✅ Accetta & Avvia Video Call
                 </button>
                 <button style={{ padding: '15px 30px', background: 'transparent', color: '#ff3366', border: '1px solid #ff3366', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer' }}>
                   âŒ Rifiuta (Rimborsa Fan)
