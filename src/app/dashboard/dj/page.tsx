@@ -42,7 +42,7 @@ export default function DJDashboard() {
       
       <main style={{ flex: 1, padding: '2rem' }}>
         <h1 className="text-gradient" style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>DJ Control Center</h1>
-        <p style={{ color: 'var(--text-main)', marginBottom: '2rem' }}>La tua programmazione interna privata. Gestisci finanze, identitÃ  e community.</p>
+        <p style={{ color: 'var(--text-main)', marginBottom: '2rem' }}>La tua programmazione interna privata. Gestisci finanze, identità e community.</p>
 
         {/* Dashboard Navigation */}
         <div style={{ display: 'flex', gap: '1rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '1rem', marginBottom: '2rem' }}>
@@ -50,7 +50,7 @@ export default function DJDashboard() {
             onClick={() => setActiveTab('finance')}
             style={{ background: 'none', border: 'none', color: activeTab === 'finance' ? '#00f0ff' : 'var(--text-main)', fontWeight: activeTab === 'finance' ? 'bold' : 'normal', fontSize: '1.2rem', cursor: 'pointer' }}
           >
-            📊 Finanza & LiquiditÃ 
+            📊 Finanza & Liquidità
           </button>
           <button 
             onClick={() => setActiveTab('profile')}
@@ -256,7 +256,7 @@ export default function DJDashboard() {
           <div style={{ display: 'flex', gap: '2rem' }}>
             <div className="glass-panel" style={{ flex: 2, padding: '2rem' }}>
               <h2 style={{ marginBottom: '1rem' }}>Nuovo Messaggio ai Fan</h2>
-              <p style={{ color: 'var(--text-main)', marginBottom: '1rem' }}>Crea un post esclusivo. Solo chi detiene la tua <img src="/coin.jpg" alt="FPM Coin" style={{ height: "1.2em", borderRadius: "50%", verticalAlign: "middle", margin: "0 5px" }} /> Coin potrÃ  leggerlo.</p>
+              <p style={{ color: 'var(--text-main)', marginBottom: '1rem' }}>Crea un post esclusivo. Solo chi detiene la tua <img src="/coin.jpg" alt="FPM Coin" style={{ height: "1.2em", borderRadius: "50%", verticalAlign: "middle", margin: "0 5px" }} /> Coin potrà leggerlo.</p>
               
               <textarea 
                 placeholder="Scrivi un aggiornamento, condividi un link privato o un dietro le quinte..." 
@@ -315,7 +315,7 @@ export default function DJDashboard() {
               <div>
                 <label style={{ display: 'block', marginBottom: '5px', color: 'var(--text-main)' }}>Token Gate (Requisito di Accesso)</label>
                 <select style={{ width: '100%', padding: '15px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(0,0,0,0.5)', color: 'white' }}>
-                  <option>Holders di <img src="/coin.jpg" alt="FPM Coin" style={{ height: "1.2em", borderRadius: "50%", verticalAlign: "middle", margin: "0 5px" }} /> (Qualsiasi quantitÃ )</option>
+                  <option>Holders di <img src="/coin.jpg" alt="FPM Coin" style={{ height: "1.2em", borderRadius: "50%", verticalAlign: "middle", margin: "0 5px" }} /> (Qualsiasi quantità)</option>
                   <option>Holders di <img src="/coin.jpg" alt="FPM Coin" style={{ height: "1.2em", borderRadius: "50%", verticalAlign: "middle", margin: "0 5px" }} />-DRK (Traccia Singola)</option>
                   <option>VIP Solo Top 10% Holders</option>
                 </select>
@@ -351,7 +351,7 @@ export default function DJDashboard() {
                 <div style={{ textAlign: 'right', minWidth: '150px' }}>
                   <p style={{ margin: '0 0 5px 0', color: 'var(--text-main)', fontSize: '0.9rem' }}>Netto per te:</p>
                   <p style={{ margin: 0, fontSize: '1.8rem', fontWeight: 'bold', color: '#00ff88' }}>500 <img src="/coin.jpg" alt="FPM Coin" style={{ height: "1.2em", borderRadius: "50%", verticalAlign: "middle", margin: "0 5px" }} /></p>
-                  <p style={{ margin: '5px 0 0 0', color: 'var(--text-main)', fontSize: '0.8rem' }}>I fondi sono giÃ  bloccati.</p>
+                  <p style={{ margin: '5px 0 0 0', color: 'var(--text-main)', fontSize: '0.8rem' }}>I fondi sono già bloccati.</p>
                 </div>
               </div>
               

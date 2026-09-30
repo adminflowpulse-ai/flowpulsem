@@ -65,7 +65,7 @@ export default function PitchSquillace() {
           Entrando ora come Ambassador, il tuo portafoglio agisce come un moltiplicatore spaventoso. 
         </p>
         <p style={{ fontSize: '2rem', lineHeight: '1.6', color: '#d0d0d0' }}>
-          Quando il mercato globale (utenti, fan, investitori) entrerÃ  a mercato aperto e spingerÃ  il token a 2.00 Euro, tu avrai fatto un <span style={{ color: 'var(--accent-green)', fontWeight: 'bold', fontSize: '3rem', display: 'block', margin: '30px 0' }}>2000x Netto</span> 
+          Quando il mercato globale (utenti, fan, investitori) entrerà a mercato aperto e spingerà il token a 2.00 Euro, tu avrai fatto un <span style={{ color: 'var(--accent-green)', fontWeight: 'bold', fontSize: '3rem', display: 'block', margin: '30px 0' }}>2000x Netto</span> 
           esattamente come i primi soci delle grandi Tech Americane. Sei dei nostri?
         </p>
       </div>

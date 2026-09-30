@@ -176,7 +176,7 @@ export default function FanDashboard() {
         {activeTab === 'phygital' && (
           <div>
             <h2 style={{ marginBottom: '1.5rem' }}>Il tuo Merch (Physical + Digital Vault)</h2>
-            <p style={{ color: 'var(--text-main)', marginBottom: '3rem' }}>I token associati ad articoli fisici reali ti garantiscono la proprietÃ  dell'NFT 3D corrispondente. Clicca il vinile per suonarlo!</p>
+            <p style={{ color: 'var(--text-main)', marginBottom: '3rem' }}>I token associati ad articoli fisici reali ti garantiscono la proprietà dell'NFT 3D corrispondente. Clicca il vinile per suonarlo!</p>
             
             <div style={{ display: 'flex', gap: '3rem', flexWrap: 'wrap', justifyContent: 'center' }}>
               <div className="glass-panel" style={{ padding: '3rem', width: '350px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
