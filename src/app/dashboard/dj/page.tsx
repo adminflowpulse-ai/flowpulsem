@@ -412,6 +412,7 @@ export default function DJDashboard() {
         )}
 
       </main>
+      )} {/* END IF CONNECTED */}
     </div>
   );
 }

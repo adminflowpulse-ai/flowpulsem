@@ -377,6 +377,7 @@ export default function FanDashboard() {
         )}
 
       </main>
+      )} {/* END IF CONNECTED */}
     </div>
   );
 }
