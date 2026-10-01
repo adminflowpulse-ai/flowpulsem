@@ -63,6 +63,9 @@ export default function FanDashboard() {
                 <li>Custodisce la vera <strong>proprietà digitale</strong> delle tue tracce musicali (NFT)</li>
                 <li>Permette di ricevere automaticamente le tue <strong>FPM Coin (Royalty)</strong> in tempo reale</li>
               </ul>
+              <div style={{ marginTop: "15px", paddingTop: "15px", borderTop: "1px solid rgba(0, 255, 136, 0.2)" }}>
+                <p style={{ color: "var(--text-main)", fontSize: "0.95rem" }}>💡 <em>Non hai un wallet? Aprire <strong>MetaMask</strong> o <strong>Coinbase Wallet</strong> è completamente gratuito, facilissimo e richiede solo 2 minuti.</em></p>
+              </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', padding: '20px', border: '1px solid var(--accent-green)', borderRadius: '16px', background: 'rgba(0,0,0,0.3)' }}>
               <ConnectButton />
