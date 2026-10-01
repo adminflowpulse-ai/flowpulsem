@@ -1,4 +1,3 @@
-import '@rainbow-me/rainbowkit/styles.css';
 'use client';
 
 import * as React from 'react';
