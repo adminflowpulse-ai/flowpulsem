@@ -4,10 +4,14 @@ import {
   metaMaskWallet,
   coinbaseWallet,
   rainbowWallet,
-  walletConnectWallet,
   trustWallet,
+  okxWallet,
+  walletConnectWallet,
   rabbyWallet,
   phantomWallet,
+  zerionWallet,
+  bitgetWallet,
+  safeWallet,
 } from '@rainbow-me/rainbowkit/wallets';
 import {
   polygon,
@@ -31,10 +35,9 @@ export const WALLETCONNECT_PROJECT_ID =
     : 'b56e18d47c72ab683b10817156fc74f4';
 
 // Custom MetaMask wallet wrapper:
-// Risolve il bug di RainbowKit dove, se window.ethereum viene iniettato dopo la valutazione del modulo,
-// metaMaskWallet fallisce ricadendo su WalletConnect che si blocca con errore 403.
-// Questo connettore chiama direttamente window.ethereum.request({ method: 'eth_requestAccounts' })
-// garantendo l'apertura immediata del popup MetaMask nel browser.
+// Risolve il problema del fallimento di rilevamento MetaMask durante SSR / caricamento del modulo,
+// collegando direttamente window.ethereum.request({ method: 'eth_requestAccounts' })
+// per garantire l'apertura immediata del popup dell'estensione.
 const customMetaMaskWallet = ({ projectId }: { projectId: string }) => {
   const defaultWallet = metaMaskWallet({ projectId });
   return {
@@ -60,21 +63,25 @@ export const config = getDefaultConfig({
   projectId: WALLETCONNECT_PROJECT_ID,
   wallets: [
     {
-      groupName: 'Consigliati',
+      groupName: 'Popolari su Polygon',
       wallets: [
         customMetaMaskWallet,
         injectedWallet,
         coinbaseWallet,
+        trustWallet,
+        okxWallet,
         rainbowWallet,
         walletConnectWallet,
       ],
     },
     {
-      groupName: 'Altri Wallet',
+      groupName: 'Altri Wallet Polygon',
       wallets: [
-        trustWallet,
         rabbyWallet,
         phantomWallet,
+        zerionWallet,
+        bitgetWallet,
+        safeWallet,
       ],
     },
   ],

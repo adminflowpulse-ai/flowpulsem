@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState, useRef } from 'react';
 import Navbar from "@/components/Navbar";
 import * as Tone from 'tone';
@@ -42,33 +42,31 @@ export default function DJDashboard() {
       <Navbar />
       
       
-      {!isConnected ? (
-        <main style={{ flex: 1, padding: '4rem 2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-          <div style={{ background: 'var(--surface-color)', padding: '40px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.05)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', maxWidth: '700px' }}>
-            <div style={{ fontSize: '3rem', marginBottom: '10px' }}>🎧</div>
-            <h2 style={{ fontSize: '2rem', color: 'var(--accent-blue)', marginBottom: '20px' }}>Il Tuo Studio Professionale</h2>
-            <p style={{ color: 'var(--text-main)', fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '30px' }}>
-              Questa è la tua Dashboard DJ dove puoi gestire la tua intera carriera in modo decentralizzato.<br/><br/>
-              Per accedere alla tua Vetrina, caricare Drop Musicali, avviare Live Room e iniziare a incassare senza intermediari, devi prima autenticarti connettendo il tuo <strong>Wallet Web3</strong>.
-            </p>
-            <div style={{ background: 'rgba(27, 97, 255, 0.05)', padding: '20px', borderRadius: '16px', border: '1px solid rgba(27, 97, 255, 0.1)', textAlign: 'left', marginBottom: '30px' }}>
-              <h4 style={{ color: 'var(--accent-blue)', marginBottom: '10px' }}>✅ Perché ti serve un Wallet?</h4>
-              <ul style={{ color: 'var(--text-muted)', lineHeight: '1.7', paddingLeft: '20px' }}>
-                <li>È il tuo <strong>conto bancario personale Web3</strong>, i soldi arrivano direttamente a te.</li>
-                <li>Ti permette di creare ed emettere i tuoi <strong>NFT Musicali (Drop)</strong>.</li>
-                <li>È la tua <strong>chiave di accesso sicura</strong>, senza bisogno di password o dati sensibili.</li>
-              </ul>
-              <div style={{ marginTop: "15px", paddingTop: "15px", borderTop: "1px solid rgba(27, 97, 255, 0.2)" }}>
-                <p style={{ color: "var(--text-main)", fontSize: "0.95rem" }}>💡 <em>Non hai ancora un wallet? Creare un account con <strong>MetaMask</strong> o <strong>Coinbase Wallet</strong> è gratis, facilissimo e richiede solo 2 minuti.</em></p>
-              </div>
+      <main style={{ flex: 1, padding: '2rem' }}>
+        {!isConnected && (
+          <div style={{
+            background: 'rgba(27, 97, 255, 0.08)',
+            border: '1px solid rgba(27, 97, 255, 0.25)',
+            borderRadius: '16px',
+            padding: '16px 24px',
+            marginBottom: '2rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '16px',
+          }}>
+            <div>
+              <strong style={{ color: '#00f0ff', fontSize: '1.05rem', display: 'block', marginBottom: '4px' }}>
+                🎧 Modalità DJ Studio Attiva
+              </strong>
+              <span style={{ color: '#ccc', fontSize: '0.9rem' }}>
+                Tutte le funzioni sono sbloccate. Connetti il tuo Wallet quando desideri emettere Drop su blockchain o incassare royalty.
+              </span>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center', padding: '20px', border: '1px solid var(--accent-blue)', borderRadius: '16px', background: 'rgba(0,0,0,0.3)' }}>
-              <ConnectButton />
-            </div>
+            <ConnectButton />
           </div>
-        </main>
-      ) : (
-        <main style={{ flex: 1, padding: '2rem' }}>
+        )}
 
         <h1 className="text-gradient" style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>DJ Control Center</h1>
         <p style={{ color: 'var(--text-main)', marginBottom: '2rem' }}>La tua programmazione interna privata. Gestisci finanze, identità e community.</p>
@@ -412,7 +410,6 @@ export default function DJDashboard() {
         )}
 
       </main>
-      )} {/* END IF CONNECTED */}
     </div>
   );
 }

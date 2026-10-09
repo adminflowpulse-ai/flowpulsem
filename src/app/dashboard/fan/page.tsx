@@ -46,34 +46,31 @@ export default function FanDashboard() {
       <Navbar />
       
       
-      {!isConnected ? (
-        <main style={{ flex: 1, padding: '4rem 2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-          <div style={{ background: 'var(--surface-color)', padding: '40px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.05)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', maxWidth: '700px' }}>
-            <div style={{ fontSize: '3rem', marginBottom: '10px' }}>🎵</div>
-            <h2 style={{ fontSize: '2rem', color: 'var(--accent-green)', marginBottom: '20px' }}>Benvenuto nel Tuo Spazio Fan</h2>
-            <p style={{ color: 'var(--text-main)', fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '30px' }}>
-              Questa è la tua Dashboard personale dove puoi esplorare, ascoltare e collezionare la musica che ami.<br/><br/>
-              <strong>Ma FlowPulseM non è un semplice player musicale.</strong><br/><br/>
-              Per sbloccare il vero potenziale della piattaforma (acquistare proprietà delle tracce, votare le decisioni degli artisti, e ricevere <em>Royalty automatiche</em> sui tuoi ascolti), devi connettere il tuo <strong>Wallet Web3</strong>.
-            </p>
-            <div style={{ background: 'rgba(0, 255, 136, 0.05)', padding: '20px', borderRadius: '16px', border: '1px solid rgba(0, 255, 136, 0.1)', textAlign: 'left', marginBottom: '30px' }}>
-              <h4 style={{ color: 'var(--accent-green)', marginBottom: '10px' }}>✅ Perché è essenziale il Wallet?</h4>
-              <ul style={{ color: 'var(--text-muted)', lineHeight: '1.7', paddingLeft: '20px' }}>
-                <li>È il tuo <strong>conto sicuro e anonimo</strong> (nessuna banca o intermediario di mezzo)</li>
-                <li>Custodisce la vera <strong>proprietà digitale</strong> delle tue tracce musicali (NFT)</li>
-                <li>Permette di ricevere automaticamente le tue <strong>FPM Coin (Royalty)</strong> in tempo reale</li>
-              </ul>
-              <div style={{ marginTop: "15px", paddingTop: "15px", borderTop: "1px solid rgba(0, 255, 136, 0.2)" }}>
-                <p style={{ color: "var(--text-main)", fontSize: "0.95rem" }}>💡 <em>Non hai un wallet? Aprire <strong>MetaMask</strong> o <strong>Coinbase Wallet</strong> è completamente gratuito, facilissimo e richiede solo 2 minuti.</em></p>
-              </div>
+      <main style={{ flex: 1, padding: '2rem' }}>
+        {!isConnected && (
+          <div style={{
+            background: 'rgba(0, 255, 136, 0.08)',
+            border: '1px solid rgba(0, 255, 136, 0.25)',
+            borderRadius: '16px',
+            padding: '16px 24px',
+            marginBottom: '2rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '16px',
+          }}>
+            <div>
+              <strong style={{ color: '#00ff88', fontSize: '1.05rem', display: 'block', marginBottom: '4px' }}>
+                🎵 Modalità Fan Room Attiva
+              </strong>
+              <span style={{ color: '#ccc', fontSize: '0.9rem' }}>
+                Tutte le tracce e la collection sono accessibili. Connetti il tuo Wallet quando desideri acquistare o ricevere royalty.
+              </span>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center', padding: '20px', border: '1px solid var(--accent-green)', borderRadius: '16px', background: 'rgba(0,0,0,0.3)' }}>
-              <ConnectButton />
-            </div>
+            <ConnectButton />
           </div>
-        </main>
-      ) : (
-        <main style={{ flex: 1, padding: '2rem' }}>
+        )}
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '3rem' }}>
           <div style={{ width: '100px', height: '100px', borderRadius: '50%', background: 'linear-gradient(45deg, #00f0ff, #fff)', position: 'relative', boxShadow: '0 0 20px rgba(0, 240, 255, 0.5)' }}>
@@ -377,7 +374,6 @@ export default function FanDashboard() {
         )}
 
       </main>
-      )} {/* END IF CONNECTED */}
     </div>
   );
 }
