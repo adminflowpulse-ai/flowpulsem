@@ -26,9 +26,16 @@ import { LanguageProvider } from './LanguageProvider';
 
 const { wallets } = getDefaultWallets();
 
+// Project ID WalletConnect/Reown: va impostato su Vercel come NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID
+// (creato su https://cloud.reown.com). Senza un ID valido WalletConnect e i wallet mobile non si collegano.
+const walletConnectProjectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || 'YOUR_PROJECT_ID';
+if (typeof window !== 'undefined' && walletConnectProjectId === 'YOUR_PROJECT_ID') {
+  console.error('[FlowPulseM] NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID mancante: WalletConnect e wallet mobile non funzioneranno.');
+}
+
 const config = getDefaultConfig({
   appName: 'FlowPulseM',
-  projectId: 'YOUR_PROJECT_ID', // Reemplaza con tu vero Project ID da WalletConnect
+  projectId: walletConnectProjectId,
   wallets: [
     ...wallets,
     {
