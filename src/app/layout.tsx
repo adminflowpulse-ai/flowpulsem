@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "@rainbow-me/rainbowkit/styles.css";
@@ -23,6 +23,12 @@ export const metadata: Metadata = {
     description: "La prima piattaforma Web3 che connette DJ e Fan tramite NFT musicali e royalty.",
     images: ['/logo.png'],
   }
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1
 };
 
 export default function RootLayout({

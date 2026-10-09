@@ -144,35 +144,30 @@ a:hover {
    MOBILE RESPONSIVENESS & MEDIA QUERIES
 ========================================= */
 @media screen and (max-width: 768px) {
-  /* Contenitori e Layout Base */
+  /* Contenitori */
   .container {
     padding: 0 10px;
   }
-  
-  /* Adattamento Testi e Intestazioni */
-  h1 { font-size: clamp(2rem, 8vw, 3rem) !important; }
-  h2 { font-size: clamp(1.5rem, 6vw, 2.5rem) !important; }
-  h3 { font-size: clamp(1.2rem, 5vw, 1.8rem) !important; }
-  p { font-size: 1rem !important; }
 
-  /* Navbar Mobile */
-  header {
-    padding: 0.5rem 0 !important;
-  }
-  .nav-link {
-    font-size: 0.9rem !important;
-    padding: 5px 10px !important;
-  }
-  
-  /* Pulsanti Mobile */
+  /* Testi */
+  h1 { font-size: clamp(1.6rem, 7vw, 2.5rem) !important; }
+  h2 { font-size: clamp(1.3rem, 5.5vw, 2rem) !important; }
+  h3 { font-size: clamp(1.1rem, 4.5vw, 1.5rem) !important; }
+  p  { font-size: 0.95rem !important; line-height: 1.5 !important; }
+
+  /* Navbar */
+  header { padding: 0.5rem 0 !important; }
+  .nav-link { font-size: 0.9rem !important; padding: 5px 10px !important; }
+
+  /* Pulsanti */
   .btn-primary, .btn-secondary {
-    padding: 10px 20px !important;
-    font-size: 0.9rem !important;
+    padding: 12px 20px !important;
+    font-size: 0.95rem !important;
     width: 100%;
     margin-bottom: 10px;
   }
 
-  /* Riorganizzazione layout a colonne per le Dashboard */
+  /* Glass panels */
   .glass-panel {
     padding: 1rem !important;
     margin-bottom: 1rem !important;
@@ -180,32 +175,46 @@ a:hover {
     flex: 1 1 100% !important;
   }
 
-  /* Tabelle (Es. Dashboard tracce) */
-  table, thead, tbody, th, td, tr { 
-    display: block; 
-  }
-  thead tr { 
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
+  /* Tabelle responsive */
+  table, thead, tbody, th, td, tr { display: block; }
+  thead tr { position: absolute; top: -9999px; left: -9999px; }
   tr { border: 1px solid rgba(255,255,255,0.1); margin-bottom: 10px; border-radius: 10px; }
-  td { 
-    border: none;
-    position: relative;
-    padding-left: 50% !important; 
-    text-align: right !important; 
+  td { border: none; position: relative; padding-left: 50% !important; text-align: right !important; }
+  td:before {
+    position: absolute; top: 6px; left: 6px;
+    width: 45%; padding-right: 10px; white-space: nowrap;
+    content: attr(data-label); color: var(--text-main);
+    text-align: left; font-weight: bold;
   }
-  td:before { 
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    width: 45%; 
-    padding-right: 10px; 
-    white-space: nowrap;
-    content: attr(data-label);
-    color: var(--text-main);
-    text-align: left;
-    font-weight: bold;
+
+  /* FIX: input font 16px evita zoom automatico su iPhone/Safari */
+  input, textarea, select {
+    font-size: 16px !important;
   }
+
+  /* FIX: blocca scroll orizzontale */
+  body { overflow-x: hidden !important; }
+
+  /* FIX: utile per layout flex che diventano colonne */
+  .grid-mobile-col {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  /* FIX: cards dashboard full width */
+  .dashboard-card {
+    width: 100% !important;
+    min-width: unset !important;
+  }
+}
+
+/* Tablet (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container { padding: 0 20px; }
+  h1 { font-size: clamp(2.5rem, 5vw, 3.5rem) !important; }
+}
+
+@media (max-width: 768px) {
+  input, textarea, select { font-size: 16px !important; }
+  body { overflow-x: hidden !important; }
 }
