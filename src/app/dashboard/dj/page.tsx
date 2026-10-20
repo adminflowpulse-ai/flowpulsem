@@ -3,10 +3,10 @@ import React, { useState, useRef } from 'react';
 import Navbar from "@/components/Navbar";
 import * as Tone from 'tone';
 import { useAccount, useBalance } from 'wagmi';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import WalletConnectTrigger, { useFlowPulseAccount } from '@/components/WalletConnectTrigger';
 
 export default function DJDashboard() {
-  const { address, isConnected } = useAccount();
+  const { address, isConnected } = useFlowPulseAccount();
   const { data: balanceData } = useBalance({ address });
   const [activeTab, setActiveTab] = useState<'finance' | 'profile' | 'community' | 'live' | 'bookings'>('finance');
   const [isPlayingVinyl, setIsPlayingVinyl] = useState(false);
@@ -64,7 +64,7 @@ export default function DJDashboard() {
                 Tutte le funzioni sono sbloccate. Connetti il tuo Wallet quando desideri emettere Drop su blockchain o incassare royalty.
               </span>
             </div>
-            <ConnectButton />
+            <WalletConnectTrigger label="Aggiungi Wallet DJ" />
           </div>
         )}
 
@@ -134,7 +134,10 @@ export default function DJDashboard() {
               </div>
               <p style={{ color: '#00ff88', fontSize: '0.9rem' }}>+12.4% questa settimana</p>
               
-              <button className="btn-primary" style={{ marginTop: '2rem', width: '100%' }}>Preleva Fondi</button>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '1.5rem' }}>
+                <WalletConnectTrigger label="Aggiungi / Gestisci Wallet" />
+                <button className="btn-primary" style={{ width: '100%' }}>Preleva Fondi</button>
+              </div>
             </div>
 
             {/* DJ Coin Status */}

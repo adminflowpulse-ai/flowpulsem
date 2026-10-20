@@ -1,8 +1,9 @@
-﻿"use client";
+"use client";
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useLanguage } from '../components/LanguageProvider';
+import WalletConnectTrigger from '../components/WalletConnectTrigger';
 
 export default function Home() {
   const [email, setEmail] = useState('');
@@ -143,6 +144,9 @@ export default function Home() {
                 🎵 {t("ESPLORA COME FAN")}
               </button>
             </Link>
+            <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'center' }}>
+              <WalletConnectTrigger label="Aggiungi / Collega Wallet (Mobile & Web3)" />
+            </div>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import WalletConnectTrigger from './WalletConnectTrigger';
 import { useLanguage, Language } from './LanguageProvider';
 
 const languageFlags: Record<Language, { flag: string, name: string }> = {
@@ -27,6 +27,7 @@ const navLinks = [
   { href: '/drops',         labelKey: 'Geo-Drops',     color: 'var(--accent-green)'},
   { href: '/governance',    labelKey: 'DAO',           color: 'var(--accent-blue)' },
   { href: '/studio',        labelKey: 'Studio',        color: 'var(--accent-red)'  },
+  { href: '/profile',       labelKey: 'Profilo',       color: '#00f0ff'            },
 ];
 
 export default function Navbar() {
@@ -37,7 +38,7 @@ export default function Navbar() {
   return (
     <>
       <nav style={{
-        padding: '12px 20px',
+        padding: '12px 16px',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -52,7 +53,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <img src="/logo.png" alt="FlowPulseM Logo" style={{ width: '48px', height: '48px', objectFit: 'contain' }} />
+          <img src="/logo.png" alt="FlowPulseM Logo" style={{ width: '44px', height: '44px', objectFit: 'contain' }} />
         </Link>
 
         {/* Links desktop — nascosti su mobile */}
@@ -71,17 +72,17 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Destra: lingua + wallet + hamburger */}
-        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+        {/* Destra: lingua + wallet (SEMPRE visibile anche su mobile!) + hamburger */}
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
 
           {/* Lingua */}
           <div style={{ position: 'relative' }}>
             <button
               onClick={() => setShowLangDropdown(!showLangDropdown)}
-              style={{ display: 'flex', alignItems: 'center', gap: '6px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', padding: '7px 10px', borderRadius: '8px', color: '#fff', cursor: 'pointer', fontSize: '0.9rem' }}
+              style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', padding: '7px 9px', borderRadius: '8px', color: '#fff', cursor: 'pointer', fontSize: '0.85rem' }}
             >
               {languageFlags[language].flag} {languageFlags[language].name}
-              <span style={{ fontSize: '0.7rem' }}>▼</span>
+              <span style={{ fontSize: '0.65rem' }}>▼</span>
             </button>
             {showLangDropdown && (
               <div style={{ position: 'absolute', top: '100%', right: 0, marginTop: '5px', background: '#1a1b23', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', overflow: 'hidden', zIndex: 1001, minWidth: '120px', boxShadow: '0 4px 12px rgba(0,0,0,0.5)' }}>
@@ -98,9 +99,9 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* Wallet — nascosto su mobile piccolo */}
-          <div className="desktop-wallet">
-            <ConnectButton />
+          {/* Wallet — sempre visibile su desktop e su cellulare nella barra superiore */}
+          <div className="navbar-wallet">
+            <WalletConnectTrigger compact />
           </div>
 
           {/* Hamburger — visibile solo su mobile */}
@@ -119,7 +120,7 @@ export default function Navbar() {
       {menuOpen && (
         <div style={{
           position: 'fixed',
-          top: '73px',
+          top: '69px',
           left: 0,
           right: 0,
           bottom: 0,
@@ -132,6 +133,12 @@ export default function Navbar() {
           gap: '8px',
           overflowY: 'auto',
         }}>
+          {/* Box Wallet in cima al menu mobile */}
+          <div style={{ marginBottom: '12px', padding: '14px', borderRadius: '14px', background: 'rgba(0, 240, 255, 0.06)', border: '1px solid rgba(0, 240, 255, 0.2)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span style={{ color: '#00f0ff', fontWeight: 'bold', fontSize: '0.95rem' }}>Il Tuo Wallet Web3:</span>
+            <WalletConnectTrigger label="Aggiungi Wallet" />
+          </div>
+
           {navLinks.map(link => (
             <Link
               key={link.href}
@@ -140,9 +147,9 @@ export default function Navbar() {
               style={{
                 color: link.color,
                 textDecoration: 'none',
-                fontSize: '1.3rem',
+                fontSize: '1.2rem',
                 fontWeight: 'bold',
-                padding: '16px 20px',
+                padding: '14px 18px',
                 borderRadius: '14px',
                 background: 'rgba(255,255,255,0.04)',
                 border: '1px solid rgba(255,255,255,0.06)',
@@ -152,11 +159,6 @@ export default function Navbar() {
               {t(link.labelKey)}
             </Link>
           ))}
-
-          {/* Wallet nel menu mobile */}
-          <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-            <ConnectButton />
-          </div>
         </div>
       )}
 
@@ -164,12 +166,10 @@ export default function Navbar() {
       <style>{`
         @media (max-width: 768px) {
           .desktop-nav    { display: none !important; }
-          .desktop-wallet { display: none !important; }
           .hamburger-btn  { display: block !important; }
         }
         @media (min-width: 769px) {
           .hamburger-btn  { display: none !important; }
-          .desktop-wallet { display: block !important; }
         }
       `}</style>
     </>

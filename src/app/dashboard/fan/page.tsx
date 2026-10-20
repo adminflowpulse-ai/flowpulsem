@@ -1,12 +1,12 @@
-﻿"use client";
+"use client";
 import React, { useState, useRef } from 'react';
 import Navbar from "@/components/Navbar";
 import * as Tone from 'tone';
 import { useAccount, useBalance } from 'wagmi';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import WalletConnectTrigger, { useFlowPulseAccount } from '@/components/WalletConnectTrigger';
 
 export default function FanDashboard() {
-  const { address, isConnected } = useAccount();
+  const { address, isConnected } = useFlowPulseAccount();
   const { data: balanceData } = useBalance({ address });
   
   const [activeTab, setActiveTab] = useState<'collection' | 'feed' | 'wallet' | 'phygital' | 'diamond'>('collection');
@@ -68,7 +68,7 @@ export default function FanDashboard() {
                 Tutte le tracce e la collection sono accessibili. Connetti il tuo Wallet quando desideri acquistare o ricevere royalty.
               </span>
             </div>
-            <ConnectButton />
+            <WalletConnectTrigger label="Aggiungi Wallet Fan" />
           </div>
         )}
 
@@ -360,7 +360,10 @@ export default function FanDashboard() {
         {/* Tab Content: WALLET */}
         {activeTab === 'wallet' && (
           <div className="glass-panel" style={{ maxWidth: '600px', padding: '2rem' }}>
-            <h2 style={{ marginBottom: '1.5rem' }}>Il tuo Saldo</h2>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '1.5rem' }}>
+              <h2 style={{ margin: 0 }}>Il tuo Saldo</h2>
+              <WalletConnectTrigger label="Aggiungi / Gestisci Wallet" />
+            </div>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '10px', marginBottom: '2rem' }}>
               <span style={{ fontSize: '3rem', fontWeight: 'bold' }}>{isConnected ? (balanceData?.formatted || "0.00") : "0.00"}</span>
               <span style={{ color: '#00f0ff', fontWeight: 'bold', fontSize: '1.5rem' }}>{isConnected ? (balanceData?.symbol || "$FPM") : "$FPM"}</span>

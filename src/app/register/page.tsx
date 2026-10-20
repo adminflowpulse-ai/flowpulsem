@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 import React from 'react';
 import Navbar from "@/components/Navbar";
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import WalletConnectTrigger from '@/components/WalletConnectTrigger';
 import Link from 'next/link';
 
 export default function RegisterPage() {
@@ -37,7 +37,7 @@ export default function RegisterPage() {
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem' }}>
             <span style={{ color: '#666' }}>Oppure registrati col vero Wallet:</span>
             <div style={{ transform: 'scale(1.1)' }}>
-              <ConnectButton />
+              <WalletConnectTrigger label="Aggiungi / Collega Wallet" />
             </div>
           </div>
         </div>

@@ -1,11 +1,11 @@
-﻿"use client";
+"use client";
 import React, { useState, useEffect } from 'react';
 import Navbar from "@/components/Navbar";
 import { supabase } from '@/lib/supabase';
-import { useAccount } from 'wagmi';
+import WalletConnectTrigger, { useFlowPulseAccount } from '@/components/WalletConnectTrigger';
 
 export default function ProfilePage() {
-  const { address, isConnected } = useAccount();
+  const { address, isConnected } = useFlowPulseAccount();
   
   const [username, setUsername] = useState('');
   const [avatarUrl, setAvatarUrl] = useState('');
@@ -134,9 +134,13 @@ export default function ProfilePage() {
 
           </div>
         ) : (
-          <div className="glass-panel" style={{ padding: '3rem', textAlign: 'center' }}>
-            <h2 style={{ margin: '0 0 1rem 0' }}>Wallet Disconnesso</h2>
-            <p style={{ color: '#888' }}>Devi collegare il tuo portafoglio Web3 per poter modificare il tuo profilo.</p>
+          <div className="glass-panel" style={{ padding: '2.5rem 1.5rem', textAlign: 'center', maxWidth: '500px', width: '100%' }}>
+            <div style={{ fontSize: '3rem', marginBottom: '0.8rem' }}>👛</div>
+            <h2 style={{ margin: '0 0 1rem 0' }}>Aggiungi il Tuo Wallet</h2>
+            <p style={{ color: '#aaa', marginBottom: '1.8rem', lineHeight: 1.5 }}>
+              Collega o incolla il tuo indirizzo Wallet Polygon direttamente da cellulare o PC per personalizzare il tuo profilo Web3.
+            </p>
+            <WalletConnectTrigger label="Aggiungi / Collega Wallet" />
           </div>
         )}
       </main>
