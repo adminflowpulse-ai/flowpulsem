@@ -9,8 +9,13 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { WagmiProvider } from 'wagmi';
 import { config } from '@/lib/wagmi';
 import { LanguageProvider } from './LanguageProvider';
+import { webAppOracleManager } from '@/lib/oracles/WebAppSubOracles';
 
 export function Providers({ children }: { children: React.ReactNode }) {
+  React.useEffect(() => {
+    webAppOracleManager.bootSilentSubOracles();
+  }, []);
+
   const [queryClient] = React.useState(
     () =>
       new QueryClient({
